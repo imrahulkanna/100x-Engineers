@@ -4,67 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+  <link rel="stylesheet" href="./style.css">
   <title>Rahul Kanna</title>
   <style>
-    html {
+    * {
       font-family: Merriweather;
     }
-
-    a{
-      color: rgb(9, 105, 249);
-    }
-  </style>
+    </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Rahul Kanna</h1>
+<body class="text-base">
+  <header class="bg-sky-200 px-3 py-5">
+    <h1 class=" text-4xl text-indigo-700 font-bold">Rahul Kanna</h1>
     <p>Computer science graduate with a strong passion for software development</p>
     <nav>
-      <a href='mailto:kannarahul05@gmail.com' target="_blank" rel="noopener noreferrer">
+      <a href='mailto:kannarahul05@gmail.com' target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">
         kannarahul05@gmail.com
       </a>
       &ensp;
       |
       &ensp;
-      <a href="tel:+918309675164" target="_blank" rel="noopener noreferrer">
+      <a href="tel:+918309675164" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">
         +91 8309675164
       </a>
       &ensp;
       |
       &ensp;
-      <a href='https://github.com/imrahulkanna' target="_blank" rel="noopener noreferrer">Github</a>
+      <a href='https://github.com/imrahulkanna' target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">Github</a>
       &ensp;
       |
       &ensp;
-      <a href='https://www.linkedin.com/in/rahulkanna/' target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href='https://www.linkedin.com/in/rahulkanna/' target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">LinkedIn</a>
       &ensp;
       |
       &ensp;
-      <a href='https://twitter.com/imrahulkanna' target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href='https://twitter.com/imrahulkanna' target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">Twitter</a>
     </nav>
   </header>
   <hr>
 
-  <main>
+  <main class="px-3 py-5">
     <section>
-      <h2>EXPERIENCE</h2>
+      <h2 class="mb-2 text-2xl font-bold">EXPERIENCE</h2>
 
-      <article>
-        <h3>Value Labs, Hyderabad - SDE Intern [Dec' 22 - Current]</h3>
-        <ul>
+      <article class="mb-4">
+        <h3 class="text-lg font-bold">Value Labs, Hyderabad - SDE Intern [Dec' 22 - Current]</h3>
+        <ul class="list-disc pl-8 ">
           <li>
             Working with technologies like <b>Hadoop, Hive, Spark</b> & <b>Kafka</b> to desgin ETL pipelines for processing real-time data.
           </li>
         </ul>
       </article>
 
-      <article>
-        <h3>Osmania University, Hyderabad - Web Dev Intern [May 22 - Aug' 22]</h3>
-        <ul>
+      <article class="mb-4">
+        <h3 class="text-lg font-bold">Osmania University, Hyderabad - Web Dev Intern [May 22 - Aug' 22]</h3>
+        <ul class="list-disc pl-8">
           <li>
             Created a dynamic admin dashboard for OU Audit Cell using <b>Flask, HTML5, CSS3, JS and MySQL</b>. Designed a search bar using
             JS to search about all affiliated colleges under OU.
-            <a href="https://oucourses.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://oucourses.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">
               oucourses.pythonanywhere.com
             </a>
           </li>
@@ -75,9 +73,9 @@
         </ul>
       </article>
       
-      <article>
-        <h3>IIIT-H, Hyderabad - Intern [Mar' 22 - May 22]</h3>
-        <ul>
+      <article class="mb-4">
+        <h3 class="text-lg font-bold">IIIT-H, Hyderabad - Intern [Mar' 22 - May 22]</h3>
+        <ul class="list-disc pl-8">
           <li>
             Created Wiki pages by generating datasets with the help of web scraping tools like <b>Beautiful Soup</b> and <b>Selenium</b>.
           </li>
@@ -88,16 +86,17 @@
         </ul>
       </article>
     </section>
+    
 
     <section>
-      <h2>PROJECTS</h2>
+      <h2 class="mb-2 text-2xl font-bold">PROJECTS</h2>
 
-      <article>
-        <h3>
+      <article class="mb-4">
+        <h3 class="text-lg font-bold">
           MusiConn
-          (<a href="https://musiconn.in/" target="_blank" rel="noopener noreferrer">musiconn.in</a>)
+          (<a href="https://musiconn.in/" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">musiconn.in</a>)
         </h3>
-        <ul>
+        <ul class="list-disc pl-8">
           <li>
             MusiConn is a <b>friend recommendation</b> web application. It uses <b>Spotify API</b> to get users' data and <b>recommend songs & people</b>
             with similar music interests. It is developed using <b>React JS</b> and <b>Firebase</b>. <b>Matrix Factorization</b> algorithm is used to
@@ -109,9 +108,9 @@
         </ul>
       </article>
 
-      <article>
-        <h3>E-voting Application using Blockchain</h3>
-        <ul>
+      <article class="mb-4">
+        <h3 class="text-lg font-bold">E-voting Application using Blockchain</h3>
+        <ul class="list-disc pl-8">
           <li>
             An online voting application using <b>HTML, CSS</b> and <b>JS</b> at the front end and <b>Ethereum blockchain</b> at the back end to make the
             voters anonymous and prevent manipulations of votes at the database server.
@@ -119,14 +118,14 @@
         </ul>
       </article>
 
-      <article>
-        <h3>
+      <article class="mb-4">
+        <h3 class="text-lg font-bold">
           Memory Game
-          (<a href="https://one-piece-game.vercel.app/" target="_blank" rel="noopener noreferrer">
+          (<a href="https://one-piece-game.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">
             one-piece-game.vercel.app
           </a>)
         </h3>
-        <ul>
+        <ul class="list-disc pl-8">
           <li>
             A classic memory game designed using <b>React JS</b> and styled using plain <b>CSS</b>. It is inspired from the characters of <b>One Piece</b> anime. 
             All cards are placed backwards and the user has to <b>flip cards</b> and match the character to their respective devil fruit power or vise versa.
@@ -134,34 +133,36 @@
         </ul>
       </article>
     </section>
+    
 
     <section>
-      <h2>EDUCATION</h2>
-      <ul>
+      <h2 class="mb-2 text-2xl font-bold">EDUCATION</h2>
+      <ul class="list-disc pl-8">
         <li>
-          <h3>
+          <h3 class="text-lg font-bold">
             B.E. (Computer Science & Engineering) [2019-2023]
           </h3>
           <p>MVSR Engineering College, GPA: 8.31</p>
         </li>
         <li>
-          <h3>
+          <h3 class="text-lg font-bold">
             Intermediate (MPC) [2017-2019]
           </h3>
           <p>Sri Chaitanya Junior Kalasala, Percentage: 97.4%</p>
         </li>
         <li>
-          <h3>
+          <h3 class="text-lg font-bold">
             Schooling [2005-2017]
           </h3>
           <p>Takshasila Public School, GPA: 10.0</p>
         </li>
       </ul>
     </section>
+    
 
     <section>
-      <h2>CERTIFICATIONS</h2>
-      <ul>
+      <h2 class="mb-2 text-2xl font-bold">CERTIFICATIONS</h2>
+      <ul class="list-disc pl-8">
         <li>Full Stack Development, 100xEngineers</li>
         <li>AWS Machine Learning</li>
         <li>Web Development, Coursera</li>
@@ -169,10 +170,11 @@
         <li>Database Management System, Oracle</li>
       </ul>
     </section>
+    
 
     <section>
-      <h2>SKILLS</h2>
-      <ul>
+      <h2 class="mb-2 text-2xl font-bold">SKILLS</h2>
+      <ul class="list-disc pl-8">
         <li><b>Front-End</b>: React JS, Javascript, HTML5, CSS3, Flask, Ethereum</li>
         <li><b>Back-End</b>: Node JS, Python, Java, Servlets</li>
         <li><b>Databases</b>: MySQL, MongoDB</li>
@@ -180,10 +182,11 @@
         <li><b>Others</b>: Git, Linux</li>
       </ul>
     </section>
+    
 
     <section>
-      <h2>ACHIEVEMENTS</h2>
-      <ul>
+      <h2 class="mb-2 text-2xl font-bold">ACHIEVEMENTS</h2>
+      <ul class="list-disc pl-8">
         <li>
           Achieved <b>AIR-18</b> and was awarded the Silver Certificate in the <b>Cisco NetAcad Rider 2023</b> competition in the Asia Pacific,
           Japan and Greater China region.
@@ -193,10 +196,11 @@
         </li>
       </ul>
     </section>
+    
 
     <section>
-      <h2>RESPONSIBILITIES</h2>
-      <ul>
+      <h2 class="mb-2 text-2xl font-bold">RESPONSIBILITIES</h2>
+      <ul class="list-disc pl-8">
         <li>
           Designed and developed a portfolio website for one of my professors using HTML, CSS and JS.
           (<a href="http://drkrishnaprasad.in" target="_blank" rel="noopener noreferrer">
@@ -213,8 +217,8 @@
       </ul>
     </section>
   </main>
-  <hr>
-  <footer>
+  <hr class="">
+  <footer class="py-3 text-center font-bold">
     <p>&copy; 2023 Rahul Kanna</p>
   </footer>
 </body> 
