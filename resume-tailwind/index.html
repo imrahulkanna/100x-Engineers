@@ -3,55 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@400;500&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Rahul Kanna</title>
-  <style>
-    html {
-      font-family: Merriweather;
+  <style type="text/tailwindcss">
+    * {
+      font-family: Montserrat
     }
 
-    a{
-      color: rgb(9, 105, 249);
+    h1 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      -webkit-text-fill-color: transparent;
+      /* -webkit-text-stroke: 4px; */
+      color: rgb(196 181 253);
+      text-shadow: -1px -1px 0 rgb(196 181 253), 1px -1px 0 rgb(196 181 253), -1px 1px 0 rgb(196 181 253), 1px 1px 0 rgb(196 181 253);
     }
-  </style>
+
+    @layer base {
+      h2 {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-decoration-line: underline;
+      }
+
+      h3 {
+        margin-bottom: 0.25rem;
+        font-size: 1.125rem; /* 18px */
+        line-height: 1.75rem; /* 28px */
+      }
+
+      h3>span {
+        font-size: 1.225rem;
+        font-weight: bold;
+      }
+
+      ul {
+        list-style-type: disc;
+        padding-left: 2rem;
+      }
+
+      li {
+        margin-bottom: 0.25rem;
+      }
+
+      li:last-child {
+        margin-bottom: 1rem;
+      }
+
+      a{
+        text-decoration-line: underline;
+        color: white;
+        font-weight: 500;
+      }
+
+      a:hover {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      nav>a{
+        margin: 0.5rem 0.5rem;
+        margin-bottom: 0.5rem;
+        color: rgb(56 189 248);
+        text-decoration-line: none;
+      }
+
+      nav>a:hover {
+        color: rgb(196 181 253);
+      }
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+    </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Rahul Kanna</h1>
-    <p>Computer science graduate with a strong passion for software development</p>
-    <nav>
+<body class="text-base">
+  <header class="bg-neutral-900 px-3 pt-5 pb-3 text-center">
+    <h1 class="my-4 text-7xl text-violet-300 font-bold">Rahul Kanna</h1>
+    <p class="mb-2 text-white">Computer Science graduate with a strong passion for Software Development</p>
+    <nav class="flex flex-wrap justify-evenly">
       <a href='mailto:kannarahul05@gmail.com' target="_blank" rel="noopener noreferrer">
-        kannarahul05@gmail.com
+        <i class="fa-regular fa-envelope fa-2xl"></i>kannarahul05@gmail.com
       </a>
-      &ensp;
-      |
-      &ensp;
       <a href="tel:+918309675164" target="_blank" rel="noopener noreferrer">
-        +91 8309675164
+        <i class="fa-solid fa-square-phone fa-2xl"></i>+91 8309675164
       </a>
-      &ensp;
-      |
-      &ensp;
-      <a href='https://github.com/imrahulkanna' target="_blank" rel="noopener noreferrer">Github</a>
-      &ensp;
-      |
-      &ensp;
-      <a href='https://www.linkedin.com/in/rahulkanna/' target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      &ensp;
-      |
-      &ensp;
-      <a href='https://twitter.com/imrahulkanna' target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href='https://github.com/imrahulkanna' target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github fa-2xl"></i>Github
+      </a>
+      <a href='https://www.linkedin.com/in/rahulkanna/' target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin fa-2xl"></i>LinkedIn
+      </a>
+      <a href='https://twitter.com/imrahulkanna' target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-twitter fa-2xl"></i>Twitter
+      </a>
     </nav>
   </header>
-  <hr>
 
-  <main>
+  <main class="px-3 py-5 bg-violet-300">
     <section>
       <h2>EXPERIENCE</h2>
 
       <article>
-        <h3>Value Labs, Hyderabad - SDE Intern [Dec' 22 - Current]</h3>
-        <ul>
+        <h3><span>Value Labs</span>, Hyderabad - <span>SDE Intern</span> [Dec' 22 - Current]</h3>
+        <ul class="list-disc pl-8 ">
           <li>
             Working with technologies like <b>Hadoop, Hive, Spark</b> & <b>Kafka</b> to desgin ETL pipelines for processing real-time data.
           </li>
@@ -59,7 +120,7 @@
       </article>
 
       <article>
-        <h3>Osmania University, Hyderabad - Web Dev Intern [May 22 - Aug' 22]</h3>
+        <h3><span>Osmania University</span>, Hyderabad - <span>Web Dev Intern</span> [May 22 - Aug' 22]</h3>
         <ul>
           <li>
             Created a dynamic admin dashboard for OU Audit Cell using <b>Flask, HTML5, CSS3, JS and MySQL</b>. Designed a search bar using
@@ -76,7 +137,7 @@
       </article>
       
       <article>
-        <h3>IIIT-H, Hyderabad - Intern [Mar' 22 - May 22]</h3>
+        <h3><span>IIIT-H</span>, Hyderabad - <span>Intern</span> [Mar' 22 - May 22]</h3>
         <ul>
           <li>
             Created Wiki pages by generating datasets with the help of web scraping tools like <b>Beautiful Soup</b> and <b>Selenium</b>.
@@ -88,13 +149,14 @@
         </ul>
       </article>
     </section>
+    
 
     <section>
       <h2>PROJECTS</h2>
 
       <article>
         <h3>
-          MusiConn
+          <span>MusiConn</span>
           (<a href="https://musiconn.in/" target="_blank" rel="noopener noreferrer">musiconn.in</a>)
         </h3>
         <ul>
@@ -110,7 +172,7 @@
       </article>
 
       <article>
-        <h3>E-voting Application using Blockchain</h3>
+        <h3><span>E-voting Application using Blockchain</span></h3>
         <ul>
           <li>
             An online voting application using <b>HTML, CSS</b> and <b>JS</b> at the front end and <b>Ethereum blockchain</b> at the back end to make the
@@ -121,7 +183,7 @@
 
       <article>
         <h3>
-          Memory Game
+          <span>Memory Game</span>
           (<a href="https://one-piece-game.vercel.app/" target="_blank" rel="noopener noreferrer">
             one-piece-game.vercel.app
           </a>)
@@ -134,30 +196,32 @@
         </ul>
       </article>
     </section>
+    
 
     <section>
       <h2>EDUCATION</h2>
       <ul>
         <li>
           <h3>
-            B.E. (Computer Science & Engineering) [2019-2023]
+            <span>B.E. (Computer Science & Engineering)</span> [2019-2023]
           </h3>
           <p>MVSR Engineering College, GPA: 8.31</p>
         </li>
         <li>
           <h3>
-            Intermediate (MPC) [2017-2019]
+            <span>Intermediate (MPC)</span> [2017-2019]
           </h3>
           <p>Sri Chaitanya Junior Kalasala, Percentage: 97.4%</p>
         </li>
         <li>
           <h3>
-            Schooling [2005-2017]
+            <span>Schooling</span> [2005-2017]
           </h3>
           <p>Takshasila Public School, GPA: 10.0</p>
         </li>
       </ul>
     </section>
+    
 
     <section>
       <h2>CERTIFICATIONS</h2>
@@ -169,6 +233,7 @@
         <li>Database Management System, Oracle</li>
       </ul>
     </section>
+    
 
     <section>
       <h2>SKILLS</h2>
@@ -180,6 +245,7 @@
         <li><b>Others</b>: Git, Linux</li>
       </ul>
     </section>
+    
 
     <section>
       <h2>ACHIEVEMENTS</h2>
@@ -193,6 +259,7 @@
         </li>
       </ul>
     </section>
+    
 
     <section>
       <h2>RESPONSIBILITIES</h2>
@@ -213,8 +280,8 @@
       </ul>
     </section>
   </main>
-  <hr>
-  <footer>
+  
+  <footer class="py-3 bg-neutral-900 text-white text-center font-bold">
     <p>&copy; 2023 Rahul Kanna</p>
   </footer>
 </body> 
