@@ -3,54 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
-  <title>Rahul Kanna</title>
-  <style>
-    html {
-      font-family: Merriweather;
-    }
-
-    a{
-      color: rgb(9, 105, 249);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+    <title>Rahul Kanna</title>
 </head>
 <body>
-  <header>
-    <h1>Rahul Kanna</h1>
-    <p>Computer science graduate with a strong passion for software development</p>
-    <nav>
+  <header id="header">
+    <h1 id="name">Rahul Kanna</h1>
+    <p id="desc">Computer Science graduate with a strong passion for Software Development</p>
+    <nav id="navbar">
       <a href='mailto:kannarahul05@gmail.com' target="_blank" rel="noopener noreferrer">
-        kannarahul05@gmail.com
+        <i class="fa-regular fa-envelope fa-2xl"></i>kannarahul05@gmail.com
       </a>
-      &ensp;
-      |
-      &ensp;
       <a href="tel:+918309675164" target="_blank" rel="noopener noreferrer">
-        +91 8309675164
+        <i class="fa-solid fa-square-phone fa-2xl"></i>+91 8309675164
       </a>
-      &ensp;
-      |
-      &ensp;
-      <a href='https://github.com/imrahulkanna' target="_blank" rel="noopener noreferrer">Github</a>
-      &ensp;
-      |
-      &ensp;
-      <a href='https://www.linkedin.com/in/rahulkanna/' target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      &ensp;
-      |
-      &ensp;
-      <a href='https://twitter.com/imrahulkanna' target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href='https://github.com/imrahulkanna' target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github fa-2xl"></i>Github
+      </a>
+      <a href='https://www.linkedin.com/in/rahulkanna/' target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin fa-2xl"></i>LinkedIn
+      </a>
+      <a href='https://twitter.com/imrahulkanna' target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-twitter fa-2xl"></i>Twitter
+      </a>
     </nav>
   </header>
-  <hr>
 
-  <main>
+  <main id="main">
     <section>
-      <h2>EXPERIENCE</h2>
+      <h2 class="section-title">EXPERIENCE</h2>
 
       <article>
-        <h3>Value Labs, Hyderabad - SDE Intern [Dec' 22 - Current]</h3>
+        <h3 class="article-title"><span>Value Labs</span>, Hyderabad - <span>SDE Intern</span> [Dec' 22 - Current]</h3>
         <ul>
           <li>
             Working with technologies like <b>Hadoop, Hive, Spark</b> & <b>Kafka</b> to desgin ETL pipelines for processing real-time data.
@@ -59,14 +48,14 @@
       </article>
 
       <article>
-        <h3>Osmania University, Hyderabad - Web Dev Intern [May 22 - Aug' 22]</h3>
+        <h3 class="article-title"><span>Osmania University</span>, Hyderabad - <span>Web Dev Intern</span> [May 22 - Aug' 22]</h3>
         <ul>
           <li>
             Created a dynamic admin dashboard for OU Audit Cell using <b>Flask, HTML5, CSS3, JS and MySQL</b>. Designed a search bar using
             JS to search about all affiliated colleges under OU.
-            <a href="https://oucourses.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
+            (<a href="https://oucourses.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
               oucourses.pythonanywhere.com
-            </a>
+            </a>)
           </li>
           <li>
             Improved the <b>User Interface</b> of the OU-CSE website by making it responsive using <b>HTML5</b> and <b>CSS3</b> and adding carousel
@@ -76,7 +65,7 @@
       </article>
       
       <article>
-        <h3>IIIT-H, Hyderabad - Intern [Mar' 22 - May 22]</h3>
+        <h3 class="article-title"><span>IIIT-H</span>, Hyderabad - <span>Intern</span> [Mar' 22 - May 22]</h3>
         <ul>
           <li>
             Created Wiki pages by generating datasets with the help of web scraping tools like <b>Beautiful Soup</b> and <b>Selenium</b>.
@@ -90,11 +79,11 @@
     </section>
 
     <section>
-      <h2>PROJECTS</h2>
+      <h2 class="section-title">PROJECTS</h2>
 
       <article>
-        <h3>
-          MusiConn
+        <h3 class="article-title">
+          <span>MusiConn</span>
           (<a href="https://musiconn.in/" target="_blank" rel="noopener noreferrer">musiconn.in</a>)
         </h3>
         <ul>
@@ -110,7 +99,7 @@
       </article>
 
       <article>
-        <h3>E-voting Application using Blockchain</h3>
+        <h3 class="article-title"><span>E-voting Application using Blockchain</span></h3>
         <ul>
           <li>
             An online voting application using <b>HTML, CSS</b> and <b>JS</b> at the front end and <b>Ethereum blockchain</b> at the back end to make the
@@ -120,8 +109,8 @@
       </article>
 
       <article>
-        <h3>
-          Memory Game
+        <h3 class="article-title">
+          <span>Memory Game</span>
           (<a href="https://one-piece-game.vercel.app/" target="_blank" rel="noopener noreferrer">
             one-piece-game.vercel.app
           </a>)
@@ -136,23 +125,23 @@
     </section>
 
     <section>
-      <h2>EDUCATION</h2>
+      <h2 class="section-title">EDUCATION</h2>
       <ul>
         <li>
-          <h3>
-            B.E. (Computer Science & Engineering) [2019-2023]
+          <h3 class="article-title">
+            <span>B.E. (Computer Science & Engineering)</span> [2019-2023]
           </h3>
           <p>MVSR Engineering College, GPA: 8.31</p>
         </li>
         <li>
-          <h3>
-            Intermediate (MPC) [2017-2019]
+          <h3 class="article-title">
+            <span>Intermediate (MPC)</span> [2017-2019]
           </h3>
           <p>Sri Chaitanya Junior Kalasala, Percentage: 97.4%</p>
         </li>
         <li>
-          <h3>
-            Schooling [2005-2017]
+          <h3 class="article-title">
+            <span>Schooling</span> [2005-2017]
           </h3>
           <p>Takshasila Public School, GPA: 10.0</p>
         </li>
@@ -160,7 +149,7 @@
     </section>
 
     <section>
-      <h2>CERTIFICATIONS</h2>
+      <h2 class="section-title">CERTIFICATIONS</h2>
       <ul>
         <li>Full Stack Development, 100xEngineers</li>
         <li>AWS Machine Learning</li>
@@ -171,7 +160,7 @@
     </section>
 
     <section>
-      <h2>SKILLS</h2>
+      <h2 class="section-title">SKILLS</h2>
       <ul>
         <li><b>Front-End</b>: React JS, Javascript, HTML5, CSS3, Flask, Ethereum</li>
         <li><b>Back-End</b>: Node JS, Python, Java, Servlets</li>
@@ -182,7 +171,7 @@
     </section>
 
     <section>
-      <h2>ACHIEVEMENTS</h2>
+      <h2 class="section-title">ACHIEVEMENTS</h2>
       <ul>
         <li>
           Achieved <b>AIR-18</b> and was awarded the Silver Certificate in the <b>Cisco NetAcad Rider 2023</b> competition in the Asia Pacific,
@@ -195,7 +184,7 @@
     </section>
 
     <section>
-      <h2>RESPONSIBILITIES</h2>
+      <h2 class="section-title">RESPONSIBILITIES</h2>
       <ul>
         <li>
           Designed and developed a portfolio website for one of my professors using HTML, CSS and JS.
@@ -213,8 +202,8 @@
       </ul>
     </section>
   </main>
-  <hr>
-  <footer>
+
+  <footer id="footer">
     <p>&copy; 2023 Rahul Kanna</p>
   </footer>
 </body> 
