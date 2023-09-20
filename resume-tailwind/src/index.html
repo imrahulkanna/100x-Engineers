@@ -5,113 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@400;500&display=swap"
   rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/dist/output.css">
   <title>Rahul Kanna</title>
   <style type="text/tailwindcss">
-    * {
-      font-family: Montserrat
-    }
-
-    h1 {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 4px;
-    }
-
-    @layer base {
-      h2 {
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        text-decoration-line: underline;
-      }
-
-      h3 {
-        margin-bottom: 0.25rem;
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-      }
-
-      h3>span {
-        font-size: 1.225rem;
-        font-weight: bold;
-      }
-
-      ul {
-        list-style-type: disc;
-        padding-left: 2rem;
-      }
-
-      li {
-        margin-bottom: 0.25rem;
-      }
-
-      li:last-child {
-        margin-bottom: 1rem;
-      }
-
-      a{
-        text-decoration-line: underline;
-        color: white;
-        font-weight: 500;
-      }
-
-      a:hover {
-        font-size: 1rem;
-        font-weight: bold;
-      }
-
-      nav>a{
-        margin: 0.5rem 0.5rem;
-        margin-bottom: 0.5rem;
-        color: rgb(56 189 248);
-        text-decoration-line: none;
-      }
-
-      nav>a:hover {
-        color: rgb(196 181 253);
-      }
-
-      i {
-        margin-right: 0.5rem;
-      }
-    }
+    
     </style>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="text-base">
-  <header class="bg-neutral-900 px-3 pt-5 pb-3 text-center">
-    <h1 class="my-4 text-7xl text-violet-300 font-bold">Rahul Kanna</h1>
+<body class="text-sm xs:text-base font-dm">
+  <header class="bg-neutral-900 px-3 pt-5 pb-3 text-center font-montserrant">
+    <h1 class="my-4 text-6xl md:text-7xl text-violet-300 font-bold font-['Verdana']">Rahul Kanna</h1>
     <p class="mb-2 text-white">Computer Science graduate with a strong passion for Software Development</p>
-    <nav class="flex flex-wrap justify-evenly">
+    <nav class="flex flex-wrap justify-evenly text-sm xs:text-sm lg:text-base">
       <a href='mailto:kannarahul05@gmail.com' target="_blank" rel="noopener noreferrer">
-        <i class="fa-regular fa-envelope fa-2xl"></i>kannarahul05@gmail.com
+        <i class="fa-regular fa-envelope fa-2xl"></i><span>kannarahul05@gmail.com</span>
       </a>
       <a href="tel:+918309675164" target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-square-phone fa-2xl"></i>+91 8309675164
+        <i class="fa-solid fa-square-phone fa-2xl"></i><span>+91 8309675164</span>
       </a>
       <a href='https://github.com/imrahulkanna' target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github fa-2xl"></i>Github
+        <i class="fa-brands fa-github fa-2xl"></i><span>Github</span>
       </a>
       <a href='https://www.linkedin.com/in/rahulkanna/' target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin fa-2xl"></i>LinkedIn
+        <i class="fa-brands fa-linkedin fa-2xl"></i><span>LinkedIn</span>
       </a>
       <a href='https://twitter.com/imrahulkanna' target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-twitter fa-2xl"></i>Twitter
+        <i class="fa-brands fa-twitter fa-2xl"></i><span>Twitter</span>
       </a>
     </nav>
   </header>
 
-  <main class="px-3 py-5 bg-violet-300">
+  <main class="px-4 py-5 bg-violet-300">
     <section>
       <h2>EXPERIENCE</h2>
 
       <article>
         <h3><span>Value Labs</span>, Hyderabad - <span>SDE Intern</span> [Dec' 22 - Current]</h3>
-        <ul class="list-disc pl-8 ">
+        <ul>
           <li>
             Working with technologies like <b>Hadoop, Hive, Spark</b> & <b>Kafka</b> to desgin ETL pipelines for processing real-time data.
           </li>
@@ -122,11 +58,7 @@
         <h3><span>Osmania University</span>, Hyderabad - <span>Web Dev Intern</span> [May 22 - Aug' 22]</h3>
         <ul>
           <li>
-            Created a dynamic admin dashboard for OU Audit Cell using <b>Flask, HTML5, CSS3, JS and MySQL</b>. Designed a search bar using
-            JS to search about all affiliated colleges under OU.
-            (<a href="https://oucourses.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
-              oucourses.pythonanywhere.com
-            </a>)
+            Created a dynamic admin dashboard for OU Audit Cell using <b>Flask, HTML5, CSS3, JS and MySQL</b>. Designed a search bar using JS to search about all affiliated colleges under OU.(<a href="https://oucourses.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">oucourses.pythonanywhere.com</a>)
           </li>
           <li>
             Improved the <b>User Interface</b> of the OU-CSE website by making it responsive using <b>HTML5</b> and <b>CSS3</b> and adding carousel
@@ -182,9 +114,7 @@
       <article>
         <h3>
           <span>Memory Game</span>
-          (<a href="https://one-piece-game.vercel.app/" target="_blank" rel="noopener noreferrer">
-            one-piece-game.vercel.app
-          </a>)
+          (<a href="https://one-piece-game.vercel.app/" target="_blank" rel="noopener noreferrer">one-piece-game.vercel.app</a>)
         </h3>
         <ul>
           <li>
@@ -258,10 +188,7 @@
       <h2>RESPONSIBILITIES</h2>
       <ul>
         <li>
-          Designed and developed a portfolio website for one of my professors using HTML, CSS and JS.
-          (<a href="http://drkrishnaprasad.in" target="_blank" rel="noopener noreferrer">
-            drkrishnaprasad.in
-          </a>)
+          Designed and developed a portfolio website for one of my professors using HTML, CSS and JS.(<a href="http://drkrishnaprasad.in" target="_blank" rel="noopener noreferrer">drkrishnaprasad.in</a>)
         </li>
         <li>
           <b>Technical Head</b> at <b>CSI-MVSR Student Branch</b> and built the annual fest FUSION-2021's website. Organized the <b>Hackathon</b> event
@@ -274,7 +201,7 @@
     </section>
   </main>
   
-  <footer class="py-3 bg-neutral-900 text-white text-center font-bold">
+  <footer class="font-montserrant py-3 bg-neutral-900 text-white text-center font-bold">
     <p>&copy; 2023 Rahul Kanna</p>
   </footer>
 </body> 

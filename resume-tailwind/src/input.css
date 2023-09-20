@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h2 {
+    @apply mb-2 font-bold text-xl xs:text-2xl font-montserrant underline;
+  }
+  
+  h3 {
+    @apply mb-1 font-montserrant text-sm xs:text-lg;
+    margin-bottom: 0.25rem;
+  }
+
+  h3>span {
+    @apply font-bold text-base xs:text-2lg;
+  }
+
+  ul {
+    @apply list-disc pl-7;
+  }
+
+  li {
+    @apply mb-1 last:mb-4;
+  }
+
+  a {
+    @apply font-sans text-sm xs:text-base text-white underline font-medium;
+  }
+  
+  nav>a {
+    @apply m-2 text-sky-400 hover:text-violet-300 no-underline;
+  }
+  
+  nav>a>span {
+    @apply hidden xs:inline;
+  }
+  
+  i {
+    @apply xs:mr-2
+  }
+  
+  section {
+    @apply mb-9 last:mb-0 p-4 bg-[rgba(255,255,255,0.2)] rounded-xl shadow-2xl;
+  }
+  
+  @media screen and (min-width: 640px) {
+    h1 {
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 4px;
+    }
+  } 
+}
+
