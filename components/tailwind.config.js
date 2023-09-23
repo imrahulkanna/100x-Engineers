@@ -11,13 +11,27 @@ module.exports = {
         "2.5xl": "26px",
       },
       colors: {
-        "twitter-neutral-50": "#F9F9F9",
-        "twitter-neutral-200": "#E4E4E4",
         "twitter-blue": "#1D9BF0",
-        "border-color": "rgba(29, 155, 240, 0.24)",
+        "twitter-blue-hover": "#1871CA",
+        'stroke': "rgba(29, 155, 240, 0.24)",
+        "twitter-neutral": {
+          50: "#F9F9F9",
+          100: "#F4F4F4",
+          200: "#E4E4E4",
+          300: "#D3D3D3",
+          400: "#A2A2A2",
+          500: "#737373",
+          600: "#525252",
+          700: "#404040",
+          800: "#262626",
+          900: "#171717",
+          950: "#0A0A0A",
+          1000: "#000000",
+        },
       },
       spacing: {
-        2.5: '10px',
+        1.5: "6px",
+        2.5: "10px",
         97.5: "390px",
         88: "334px",
         26: "100px",
@@ -26,9 +40,12 @@ module.exports = {
         145: "145.238px",
         366: "366.817",
       },
+      lineHeight: {
+        normal: "normal",
+      },
       borderRadius: {
         "signup-radius": "65px",
-        'twitter': '30px'
+        twitter: "30px",
       },
       boxShadow: {
         signup: "0px 8px 16px 0px rgba(0, 0, 0, 0.25)",

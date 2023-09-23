@@ -7,23 +7,23 @@
   <link rel="stylesheet" href="../dist/output.css">
   <title>100x Components</title>
 </head>
-<body class="p-3 w-screen min-h-screen overflow-y-auto bg-black flex justify-between items-start flex-wrap font-inter">
+<body class="p-3 w-screen h-screen border bg-black  font-inter flex flex-col justify-center items-center flex-wrap gap-10 ">
   <button
-    class="w-88 py-2 px-6 rounded-signup-radius flex justify-center items-center gap-2.5 shadow-signup backdrop-blur-xl-1 bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:opacity-50 disabled:bg-twitter-neutral-50 disabled:hover:bg-twitter-neutral-50">
+    class="w-88 py-2 px-6 rounded-signup-radius flex justify-center items-center gap-2.5 shadow-signup backdrop-blur-xl-1 bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:opacity-50  disabled:hover:bg-twitter-neutral-50">
     <p class="text-black font-bold text-base leading-normal">
       Create account
     </p>
   </button>
   
   <button
-    class="w-88 py-2 px-6 border border-border-color rounded-signup-radius flex justify-center items-center gap-2.5 shadow-signup backdrop-blur-xl-1">
+    class="w-88 py-2 px-6 border border-stroke rounded-signup-radius flex justify-center items-center gap-2.5 shadow-signup backdrop-blur-xl-1">
     <p class="text-twitter-blue font-bold text-base leading-normal">
       Sign up
     </p>
   </button>
 
   <button
-    class="w-[85px] py-2 px-5 rounded-twitter flex justify-center items-center gap-2.5 bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:bg-twitter-neutral-200 disabled:opacity-50">
+    class="py-2 px-5 rounded-twitter flex justify-center items-center gap-2.5 bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:bg-twitter-neutral-200 disabled:opacity-50">
     <p 
       class="text-black text-sm leading-normal font-bold">
       Follow
@@ -36,5 +36,51 @@
       Next
     </p>
   </button>
+
+  <button
+    class="py-1.5 px-4 flex justify-center items-center gap-2.5 rounded-signup-radius border border-stroke shadow-signup backdrop-blur-xl-1">
+    <p
+      class="text-twitter-neutral-50 text-sm font-bold leading-none">
+      Following
+    </p>
+  </button>
+
+  <button
+    class="py-3 px-6 flex justify-center items-center gap-2.5 rounded-twitter bg-twitter-blue hover:bg-twitter-blue-hover disabled:opacity-50 disabled:hover:bg-twitter-blue md:py-[15px] md:px-[93px] md:rounded-full lg:w-[442px] lg:p-5">
+    <p
+      class="text-twitter-neutral-50 text-base font-bold leading-normal">
+      Post
+    </p>
+  </button>
+
+  <div
+    class="w-[598px] h-[58px] pt-5 px-20 flex justify-center items-center gap-40 flex-shrink-0 border-b border-twitter-neutral-700">
+    <div
+      class="flex flex-col gap-4">
+      <p
+        class="text-twitter-neutral-400 text-base font-medium leading-normal">
+        For you
+      </p>
+      <div class="w-[56px] h-[3px] rounded-twitter bg-twitter-blue"></div>
+    </div>
+    <div
+      class="flex flex-col gap-3"> 
+      <p
+        class="text-twitter-neutral-50 text-base font-medium leading-normal">
+        Following
+      </p>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="flex flex-col justify-center gap-4 items-center">
+    <img src="../public/images/home.svg" alt="home icon default">
+    <img src="../public/images/home-selected.svg" alt="home icon default">
+  </div>
+
+  <div class="flex flex-col justify-center gap-4 items-center">
+    <img src="../public/images/profile.svg" alt="home icon default">
+    <img src="../public/images/profile-selected.svg" alt="home icon default">
+  </div>
 </body>
 </html>
