@@ -14,6 +14,7 @@ module.exports = {
         "twitter-blue": "#1D9BF0",
         "twitter-blue-hover": "#1871CA",
         'stroke': "rgba(29, 155, 240, 0.24)",
+        'searchbar-fill': '#212327',
         "twitter-neutral": {
           50: "#F9F9F9",
           100: "#F4F4F4",
