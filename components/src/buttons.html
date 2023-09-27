@@ -7,80 +7,174 @@
   <link rel="stylesheet" href="../dist/output.css">
   <title>100x Components</title>
 </head>
-<body class="p-4 bg-black w-full min-h-screen font-inter flex flex-col justify-center flex-wrap items-center  gap-10 ">
-  <button
-    class="w-88 py-2 px-6 rounded-signup-radius flex justify-center items-center gap-2.5 shadow-signup backdrop-blur-xl-1 bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:opacity-50  disabled:hover:bg-twitter-neutral-50">
-    <p class="text-black font-bold text-base leading-normal">
-      Create account
-    </p>
-  </button>
+
+<body class="w-full bg-black font-inter">
+<!-- Header & Navbar -->
+  <header>
+    <nav class="h-[58px] pt-5 flex flex-wrap justify-evenly items-start border-b border-twitter-neutral-700 text-twitter-neutral-50 text-base font-medium leading-normal">
+      <a href="./buttons.html" class="flex flex-col gap-4">
+        <p>
+          Buttons
+        </p>
+        <div class="w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./cards.html" class="flex flex-col gap-4">
+        <p>
+          Cards
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./inputs.html" class="flex flex-col gap-4">
+        <p>
+          Inputs
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./tweets.html" class="flex flex-col gap-4">
+        <p>
+          Tweets
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+    </nav>
+  </header>
+<!-- Main Area -->
+  <main class="p-4 flex flex-col items-start gap-3">
+    <!-- Create Account button -->
+    <div class="flex flex-wrap gap-2 md:gap-4">
+      <button class="w-88 py-2 px-6 rounded-signup-radius flex justify-center items-center gap-2.5 shadow-signup backdrop-blur-xl-1 bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:opacity-50  disabled:hover:bg-twitter-neutral-50">
+        <p class="text-black font-bold text-base leading-normal">
+          Create account
+        </p>
+      </button>
+
+      <button disabled class="w-88 py-2 px-6 rounded-signup-radius flex justify-center items-center gap-2.5 shadow-signup backdrop-blur-xl-1 bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:opacity-50  disabled:hover:bg-twitter-neutral-50">
+        <p class="text-black font-bold text-base leading-normal">
+          Create account
+        </p>
+      </button>
+    </div>
   
-  <button
-    class="w-88 py-2 px-6 border border-stroke rounded-signup-radius flex justify-center items-center gap-2.5 shadow-signup backdrop-blur-xl-1">
-    <p class="text-twitter-blue font-bold text-base leading-normal">
-      Sign up
-    </p>
-  </button>
+    <!-- Sign up button -->
+    <div>
+      <button class="w-88 py-2 px-6 border border-stroke rounded-signup-radius flex justify-center items-center gap-2.5 shadow-signup backdrop-blur-xl-1">
+        <p class="text-twitter-blue font-bold text-base leading-normal">
+          Sign up
+        </p>
+      </button>
+    </div>
 
-  <button
-    class="py-2 px-5 rounded-twitter flex justify-center items-center gap-2.5 bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:bg-twitter-neutral-200 disabled:opacity-50">
-    <p 
-      class="text-black text-sm leading-normal font-bold">
-      Follow
-    </p>
-  </button>
+    <!-- Follow button -->
+    <div>
+      <button class="py-2 px-5 rounded-twitter flex justify-center items-center gap-2.5 bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:bg-twitter-neutral-200 disabled:opacity-50">
+        <p class="text-black text-sm leading-normal font-bold">
+        Follow
+        </p>
+      </button>
+    </div>
+    
+    <!-- Next button -->
+    <div class="flex flex-wrap gap-2 md:gap-4">
+      <button class="w-[442px] py-3 px-6 flex justify-center items-center gap-2.5 rounded-signup-radius shadow-signup backdrop-blur-xl-1  bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:bg-twitter-neutral-200 disabled:opacity-50">
+        <p class="text-black font-bold text-base leading-normal">
+          Next
+        </p>
+      </button>
 
-  <button
-    class="w-[442px] py-3 px-6 flex justify-center items-center gap-2.5 rounded-signup-radius shadow-signup backdrop-blur-xl-1  bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:bg-twitter-neutral-200 disabled:opacity-50">
-    <p class="text-black font-bold text-base leading-normal">
-      Next
-    </p>
-  </button>
+      <button disabled class="w-[442px] py-3 px-6 flex justify-center items-center gap-2.5 rounded-signup-radius shadow-signup backdrop-blur-xl-1  bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:bg-twitter-neutral-200 disabled:opacity-50">
+        <p class="text-black font-bold text-base leading-normal">
+          Next
+        </p>
+      </button>
+    </div>
 
-  <button
-    class="py-1.5 px-4 flex justify-center items-center gap-2.5 rounded-signup-radius border border-stroke shadow-signup backdrop-blur-xl-1">
-    <p
-      class="text-twitter-neutral-50 text-sm font-bold leading-none">
-      Following
-    </p>
-  </button>
+    <!-- Following button -->
+    <div class="flex flex-wrap gap-2 md:gap-4">
+      <button class="py-1.5 px-4 flex justify-center items-center gap-2.5 rounded-signup-radius border border-stroke shadow-signup backdrop-blur-xl-1">
+        <p class="text-twitter-neutral-50 text-sm font-bold leading-none">
+          Following
+        </p>
+      </button>
+    </div>
+    
+    <!-- Post button -->
+    <div class="flex flex-wrap gap-2 md:gap-4">
+      <button class="py-3 px-6 flex justify-center items-center gap-2.5 rounded-twitter bg-twitter-blue hover:bg-twitter-blue-hover disabled:opacity-50 disabled:hover:bg-twitter-blue md:py-[15px] md:px-[93px] md:rounded-full lg:w-[442px] lg:p-5">
+        <p class="text-twitter-neutral-50 text-base font-bold leading-normal">
+        Post
+        </p>
+      </button>
 
-  <button
-    class="py-3 px-6 flex justify-center items-center gap-2.5 rounded-twitter bg-twitter-blue hover:bg-twitter-blue-hover disabled:opacity-50 disabled:hover:bg-twitter-blue md:py-[15px] md:px-[93px] md:rounded-full lg:w-[442px] lg:p-5">
-    <p
-      class="text-twitter-neutral-50 text-base font-bold leading-normal">
-      Post
-    </p>
-  </button>
+      <button disabled class="py-3 px-6 flex justify-center items-center gap-2.5 rounded-twitter bg-twitter-blue hover:bg-twitter-blue-hover disabled:opacity-50 disabled:hover:bg-twitter-blue md:py-[15px] md:px-[93px] md:rounded-full lg:w-[442px] lg:p-5">
+        <p class="text-twitter-neutral-50 text-base font-bold leading-normal">
+          Post
+        </p>
+      </button>
+    </div>
 
-  <div
-    class="w-[598px] h-[58px] pt-5 px-20 flex justify-center items-center gap-40 flex-shrink-0 border-b border-twitter-neutral-700">
-    <div
-      class="flex flex-col gap-4">
-      <p
-        class="text-twitter-neutral-400 text-base font-medium leading-normal">
+    <!-- NavBar -->
+    <div class="w-[598px] h-[58px] pt-5 px-20 flex justify-center items-start gap-40 flex-shrink-0 border-b border-twitter-neutral-700 text-twitter-neutral-50 text-base font-medium leading-normal">
+      <div class="flex flex-col gap-4">
+        <p class="text-twitter-neutral-400">
         For you
-      </p>
-      <div class="w-[56px] h-[3px] rounded-twitter bg-twitter-blue"></div>
+        </p>
+        <div class="w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </div>
+      <div class="flex flex-col gap-4"> 
+          <p class="">
+          Following
+          </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </div>
     </div>
-    <div
-      class="flex flex-col gap-3"> 
-      <p
-        class="text-twitter-neutral-50 text-base font-medium leading-normal">
-        Following
-      </p>
-      <div></div>
+
+    <!-- Icons -->
+    <div class="flex flex-wrap gap-2 md:gap-4">
+      <img src="../public/images/home.svg" alt="home icon default">
+      <img src="../public/images/home-selected.svg" alt="home icon default">
     </div>
-  </div>
 
-  <div class="flex flex-col justify-center gap-4 items-center">
-    <img src="../public/images/home.svg" alt="home icon default">
-    <img src="../public/images/home-selected.svg" alt="home icon default">
-  </div>
+    <div class="flex flex-wrap gap-2 md:gap-4">
+      <img src="../public/images/profile.svg" alt="home icon default">
+      <img src="../public/images/profile-selected.svg" alt="home icon default">
+    </div>
 
-  <div class="flex flex-col justify-center gap-4 items-center">
-    <img src="../public/images/profile.svg" alt="home icon default">
-    <img src="../public/images/profile-selected.svg" alt="home icon default">
-  </div>
+    <div class="flex items-end gap-[2px]">
+      <img src="../public/images/100.svg" alt="100">
+      <img src="../public/images/x.svg" alt="x">
+    </div>
+
+    <div class="flex flex-wrap gap-2 md:gap-4">
+      <img src="../public/images/more.svg" alt="more-icon">
+      <img src="../public/images/comment.svg" alt="comment-icon">
+      <img src="../public/images/retweet.svg" alt="retweet-icon">
+      <img src="../public/images/heart.svg" alt="heart-icon">
+      <img src="../public/images/reach.svg" alt="reach-icon">
+      <img src="../public/images/share.svg" alt="share-icon">
+      <img src="../public/images/calendar.svg" alt="calender-icon">
+      <img src="../public/images/bookmark.svg" alt="bookmark-icon">
+    </div>
+
+    <div class="flex flex-wrap gap-2 md:gap-4">
+      <img src="../public/images/retweet-active.svg" alt="retweet-active-icon">
+      <img src="../public/images/heart-active.svg" alt="heart-active-icon">
+      <img src="../public/images/bookmark-active.svg" alt="bookmark-active-icon">
+      <img src="../public/images/reach-active.svg" alt="reach-active-icon">
+      <img src="../public/images/share-active.svg" alt="share-active-icon">
+    </div>
+    
+    <div class="flex flex-wrap gap-2 md:gap-4">
+      <img src="../public/images/cancel.svg" alt="cancel-icon">
+      <img src="../public/images/back.svg" alt="back-icon">
+      <img src="../public/images/settings.svg" alt="settings-icon">
+      <img src="../public/images/correct.svg" alt="correct-icon">
+      <img src="../public/images/photo.svg" alt="photo-icon">
+    </div>
+
+    <div class="p-2 rounded-md bg-twitter-neutral-900 flex flex-wrap gap-2 md:gap-4">
+      <img src="../public/images/visible-t.svg" alt="visible-t-icon">
+      <img src="../public/images/visible-f.svg" alt="visible-f-icon">
+    </div>
+  </main>
 </body>
 </html>

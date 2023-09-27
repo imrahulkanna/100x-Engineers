@@ -6,29 +6,82 @@
   <link rel="stylesheet" href="../dist/output.css">
   <title>100x Components</title>
 </head>
-<body class="min-h-screen p-4 bg-[#040404] font-inter flex flex-wrap justify-around items-center gap-4">
+<body class=" bg-[#040404] font-inter">
+  <!-- Header & Navbar -->
+  <header>
+    <nav
+      class="h-[58px] pt-5 flex flex-wrap justify-evenly items-start border-b border-twitter-neutral-700 text-twitter-neutral-50 text-base font-medium leading-normal">
+      <a href="./buttons.html" class="flex flex-col gap-4">
+        <p>
+          Buttons
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./cards.html" class="flex flex-col gap-4">
+        <p>
+          Cards
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./inputs.html" class="flex flex-col gap-4">
+        <p>
+          Inputs
+        </p>
+        <div class="w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./tweets.html" class="flex flex-col gap-4">
+        <p>
+          Tweets
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+    </nav>
+  </header>
 
-  <div class="w-[426px] relative">
-    <input class="peer w-[426px] py-4 pl-3 pr-9 border border-twitter-neutral-500 bg-[#040404] rounded-[4px] placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-xl leading-normal focus:outline-none focus:border-twitter-blue focus:ring-twitter-blue" placeholder="label" type="text">
-
-    <div class="bg-[#040404] px-1  text-twitter-neutral-500 text-xs font-medium leading-normal absolute -top-2 left-4 peer-focus:text-twitter-blue">
-      Label
-    </div>
-
-    <img src="../public/images/correct.svg" alt="correct-icon" class="hidden absolute top-1/2 right-3 -translate-y-1/2 peer-focus:block">
-  </div>
+  <!-- Main section -->
+  <main class="p-4 pt-10 md:p-10 flex flex-col flex-wrap items-start gap-20">
+    <!-- Label Input -->
+    <!-- <fieldset class="w-[426px] text-twitter-neutral-500 pt-2  pb-4 px-3 border border-twitter-neutral-500 rounded-[4px] flex items-center focus-within:outline-none focus-within:border-twitter-blue focus-within:ring-twitter-blue">
+      <input type="text" placeholder="label" class="peer w-full pr-6 bg-transparent  placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-xl leading-normal focus:outline-none focus:pr-0">
+      <legend class="px-1 text-twitter-neutral-500 text-xs font-medium leading-normal peer-focus:text-twitter-blue">
+        Label
+      </legend>
+      <img src="../public/images/correct.svg" alt="correct-icon" class="hidden peer-focus:inline-block">
+    </fieldset> -->
+    <!-- built using absolute positioning -->
+    <div class="w-[426px] relative">
+      <input class="peer w-[426px] py-4 pl-3 pr-9 border border-twitter-neutral-500 bg-transparent rounded-[4px] placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-xl leading-normal focus:outline-none focus:border-twitter-blue focus:ring-twitter-blue" placeholder="label" type="text">
   
-  <div class="flex gap-3">
-    <img src="../public/images/rahul.jpg" alt="user-profile" class="w-9 h-9 rounded-full">
-    <input class="w-[434px] flex items-center self-stretch bg-[#040404] placeholder:text-twitter-neutral-600 text-twitter-neutral-50 text-xl leading-normal focus:outline-none" placeholder="What's happening?!" type="text">
-  </div>
+      <div class="bg-[#040404] px-1  text-twitter-neutral-500 text-xs font-medium leading-normal absolute -top-2 left-4 peer-focus:text-twitter-blue">
+        Label
+      </div>
+  
+      <img src="../public/images/correct.svg" alt="correct-icon" class="hidden absolute top-1/2 right-3 -translate-y-1/2 peer-focus:block">
+    </div>
+    
+    <!-- What's Happening Input -->
+    <div class="flex gap-3">
+      <img src="../public/images/rahul.jpg" alt="user-profile" class="w-9 h-9 rounded-full">
+      <input class="w-[434px] flex items-center self-stretch bg-[#040404] placeholder:text-twitter-neutral-600 text-twitter-neutral-50 text-xl leading-normal focus:outline-none" placeholder="What's happening?!" type="text">
+    </div>
+  
+    <!-- Search Input -->
+    <!-- Using input ele as the parent container -->
+    <!-- <div class="relative w-[348px]">
+      <input class="peer w-[348px] h-[39px] py-2.5 pl-[50px] pr-4 rounded-full  bg-searchbar-fill text-twitter-neutral-50 leading-normal placeholder:text-twitter-neutral-600 focus:outline-none border border-transparent focus:border-twitter-blue focus:ring-twitter-blue" placeholder="Search" type="text">
+  
+      <img src="../public/images/search.svg" alt="search-icon" class="peer absolute top-1/2 -translate-y-1/2 left-4 peer-focus:hidden">
+  
+      <img src="../public/images/search-focus.svg" alt="search-icon" class="peer hidden absolute top-1/2 -translate-y-1/2 left-4 peer-focus:block">
+    </div> -->
 
-  <div class="relative w-[348px]">
-    <input class="peer w-[348px] h-[39px] py-2.5 pl-[50px] pr-4 rounded-full  bg-searchbar-fill text-twitter-neutral-50 leading-normal placeholder:text-twitter-neutral-600 focus:outline-none border border-transparent focus:border-twitter-blue focus:ring-twitter-blue" placeholder="Search" type="text">
+    <!-- Using another div as container -->
+    <div class="group w-[348px] h-[39px] py-2.5 px-4 rounded-full bg-searchbar-fill flex flex-row-reverse items-center gap-[15px] border border-transparent focus-within:border-twitter-blue">
+      <input type="text" placeholder="Search" class="w-full bg-transparent text-twitter-neutral-50 leading-normal placeholder:text-twitter-neutral-600 focus:outline-none">
 
-    <img src="../public/images/search.svg" alt="search-icon" class="peer absolute top-1/2 -translate-y-1/2 left-4 peer-focus:hidden">
-
-    <img src="../public/images/search-focus.svg" alt="search-icon" class="peer hidden absolute top-1/2 -translate-y-1/2 left-4 peer-focus:block">
-  </div>
+      <img src="../public/images/search.svg" alt="search-icon" class="group-focus-within:hidden">
+      <img src="../public/images/search-focus.svg" alt="search-icon" class="hidden group-focus-within:inline-block">
+    </div>
+  </main>
 </body>
 </html>

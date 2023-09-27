@@ -13,8 +13,14 @@ module.exports = {
       colors: {
         "twitter-blue": "#1D9BF0",
         "twitter-blue-hover": "#1871CA",
-        'stroke': "rgba(29, 155, 240, 0.24)",
-        'searchbar-fill': '#212327',
+        "twitter-blue-disabled": "#1E5D87",
+        "blue-wash": "rgba(117, 190, 239, 0.2)",
+        "stroke": "rgba(29, 155, 240, 0.24)",
+        "button-stroke": "#546A7A",
+        "searchbar-fill": "#212327",
+        "card-fill": "#16181C",
+        success: "#00BE74",
+        error: "#8B141A",
         "twitter-neutral": {
           50: "#F9F9F9",
           100: "#F4F4F4",

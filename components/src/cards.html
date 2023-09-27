@@ -6,32 +6,66 @@
   <link rel="stylesheet" href="../dist/output.css">
   <title>100x Components</title>
 </head>
-<body class="bg-[#40596A] p-4 flex flex-wrap gap-4 justify-center items-start font-inter">
-  <div
-    class="w-[512px] h-[355px] py-2.5 px-[15px] inline-flex flex-col justify-between items-center flex-shrink-0 rounded-2xl bg-black">
-  </div>
+<body class="bg-[#40596A] font-inter">
+  <!-- Header & Navbar -->
+  <header>
+    <nav
+      class="h-[58px] pt-5 flex flex-wrap justify-evenly items-start border-b border-twitter-neutral-700 text-twitter-neutral-50 text-base font-medium leading-normal">
+      <a href="./buttons.html" class="flex flex-col gap-4">
+        <p>
+          Buttons
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./cards.html" class="flex flex-col gap-4">
+        <p>
+          Cards
+        </p>
+        <div class="w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./inputs.html" class="flex flex-col gap-4">
+        <p>
+          Inputs
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./tweets.html" class="flex flex-col gap-4">
+        <p>
+          Tweets
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+    </nav>
+  </header>
 
-  <div
-    class="py-2.5 px-[15px] inline-flex flex-col items-start gap-3 rounded-2xl bg-black">
+  <!-- Main Section -->
+  <main class="m-4 flex flex-col justify-start items-start gap-4">
     <div
-      class="w-[482px] py-3 px-4 flex items-center gap-5">
-      <img class="flex-shrink-0" src="../public/images/card-x.svg" alt="x logo">
-
-      <p class="text-[15px] text-twitter-neutral-50 font-bold leading-normal">Header</p>
-    </div>
-
-    <div
-      class="h-[143px] p-5 pt-20 flex flex-col items-start gap-2.5 self-stretch">
-    </div>
-  </div>
-
-  <div class="py-2.5 px-[15px] inline-flex flex-col items-start gap-3 rounded-2xl bg-black">
-    <div class="w-[482px] py-3 px-4 flex items-center gap-5">
-      <img class="flex-shrink-0" src="../public/images/card-x.svg" alt="x logo">
+      class="w-[512px] h-[355px] py-2.5 px-[15px] inline-flex flex-col justify-between items-center flex-shrink-0 rounded-2xl bg-black">
     </div>
   
-    <div class="h-[143px] p-5 pt-20 flex flex-col items-start gap-2.5 self-stretch">
+    <div
+      class="py-2.5 px-[15px] inline-flex flex-col items-start gap-3 rounded-2xl bg-black">
+      <div
+        class="w-[482px] py-3 px-4 flex items-center gap-5">
+        <img class="flex-shrink-0" src="../public/images/card-x.svg" alt="x logo">
+  
+        <p class="text-[15px] text-twitter-neutral-50 font-bold leading-normal">Header</p>
+      </div>
+  
+      <div
+        class="h-[143px] p-5 pt-20 flex flex-col items-start gap-2.5 self-stretch">
+      </div>
     </div>
-  </div>
+  
+    <div class="py-2.5 px-[15px] inline-flex flex-col items-start gap-3 rounded-2xl bg-black">
+      <div class="w-[482px] py-3 px-4 flex items-center gap-5">
+        <img class="flex-shrink-0" src="../public/images/card-x.svg" alt="x logo">
+      </div>
+    
+      <div class="h-[143px] p-5 pt-20 flex flex-col items-start gap-2.5 self-stretch">
+      </div>
+    </div>
+  </main>
 </body>
 </html>

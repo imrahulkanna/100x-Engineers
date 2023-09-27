@@ -6,61 +6,95 @@
   <link rel="stylesheet" href="../dist/output.css">
   <title>100x Components</title>
 </head>
-<body class="bg-[#040404] min-h-screen flex justify-center items-center font-inter">
-  <div class="w-[598px] py-2 px-4 border-b border-twitter-neutral-700 flex items-start gap-4">
-    
-    <img src="../public/images/rahul.jpg" alt="user-avatar" class="w-12 h-12 rounded-full object-fit flex-shrink-0">
-
-    <div class="flex flex-col items-start gap-1">
-      <header
-        class="flex items-center gap-2 self-stretch">
-        <p class="text-twitter-neutral-50 text-base font-medium leading-normal">
-          Rahul Kanna
+<body class="bg-[#040404] font-inter">
+  <!-- Header & Navbar -->
+  <header>
+    <nav
+      class="h-[58px] pt-5 flex flex-wrap justify-evenly items-start border-b border-twitter-neutral-700 text-twitter-neutral-50 text-base font-medium leading-normal">
+      <a href="./buttons.html" class="flex flex-col gap-4">
+        <p>
+          Buttons
         </p>
-        <p class="text-twitter-neutral-500 text-base font-normal leading-normal">
-          @imrahulkanna • 10h
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./cards.html" class="flex flex-col gap-4">
+        <p>
+          Cards
         </p>
-      </header>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./inputs.html" class="flex flex-col gap-4">
+        <p>
+          Inputs
+        </p>
+        <div class="hidden w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+      <a href="./tweets.html" class="flex flex-col gap-4">
+        <p>
+          Tweets
+        </p>
+        <div class="w-full h-[3px] rounded-twitter bg-twitter-blue"></div>
+      </a>
+    </nav>
+  </header>
 
-      <p class="self-stretch text-twitter-neutral-50 text-base leading-normal">
-        Writing gets easier after the first sentence.
-        <br> <br>
-        Lifting gets easier after the first set.
-        <br> <br>
-        People think and think and think until they finally decide to act. Their attention shifts from internal to external, and the difficulty they created in their mind vanishes.
-      </p>
-
-      <div class="py-3 flex justify-between items-center self-stretch text-twitter-neutral-500 text-sm leading-normal">
-        <button class="flex items-center gap-[5px]">
-          <img src="../public/images/comment.svg" alt="comment-icon">
-          <p>11</p>
-        </button>
-
-        <button class="flex items-center gap-[5px]">
-          <img src="../public/images/retweet.svg" alt="retweet-icon">
-          <p>270</p>
-        </button>
-
-        <button class="flex items-center gap-[5px]">
-          <img src="../public/images/heart.svg" alt="heart-icon">
-          <p>1,869</p>
-        </button>
-
-        <button class="flex items-center gap-[5px]">
-          <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.518066" y="5.71423" width="1.71429" height="9.14287" fill="#737373" />
-            <rect x="3.94678" y="-1.52588e-05" width="1.71429" height="14.8572" fill="#737373" />
-            <rect x="7.37549" y="7.99995" width="1.71429" height="6.85715" fill="#737373" />
-            <rect x="10.8037" y="3.42851" width="1.71429" height="11.4286" fill="#737373" />
-          </svg>
-          <p>99.6k</p>
-        </button>
-        
-        <button class="flex items-center">
-          <img src="../public/images/share.svg" alt="share-icon">
-        </button>
+  <!-- Main section -->
+  <main class="p-5">
+    <div class="w-[598px] py-2 px-4 border-b border-twitter-neutral-700 flex items-start gap-4">
+      
+      <img src="../public/images/rahul.jpg" alt="user-avatar" class="w-12 h-12 rounded-full object-fit flex-shrink-0">
+  
+      <div class="flex flex-col items-start gap-1">
+        <header
+          class="flex items-center gap-2 self-stretch">
+          <p class="text-twitter-neutral-50 text-base font-medium leading-normal">
+            Rahul Kanna
+          </p>
+          <p class="text-twitter-neutral-500 text-base font-normal leading-normal">
+            @imrahulkanna • 10h
+          </p>
+        </header>
+  
+        <p class="self-stretch text-twitter-neutral-50 text-base leading-normal">
+          Writing gets easier after the first sentence.
+          <br> <br>
+          Lifting gets easier after the first set.
+          <br> <br>
+          People think and think and think until they finally decide to act. Their attention shifts from internal to external, and the difficulty they created in their mind vanishes.
+        </p>
+  
+        <div class="py-3 flex justify-between items-center self-stretch text-twitter-neutral-500 text-sm leading-normal">
+          <button class="flex items-center gap-[5px]">
+            <img src="../public/images/comment.svg" alt="comment-icon">
+            <p>11</p>
+          </button>
+  
+          <button class="flex items-center gap-[5px]">
+            <img src="../public/images/retweet.svg" alt="retweet-icon">
+            <p>270</p>
+          </button>
+  
+          <button class="flex items-center gap-[5px]">
+            <img src="../public/images/heart.svg" alt="heart-icon">
+            <p>1,869</p>
+          </button>
+  
+          <button class="flex items-center gap-[5px]">
+            <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.518066" y="5.71423" width="1.71429" height="9.14287" fill="#737373" />
+              <rect x="3.94678" y="-1.52588e-05" width="1.71429" height="14.8572" fill="#737373" />
+              <rect x="7.37549" y="7.99995" width="1.71429" height="6.85715" fill="#737373" />
+              <rect x="10.8037" y="3.42851" width="1.71429" height="11.4286" fill="#737373" />
+            </svg>
+            <p>99.6k</p>
+          </button>
+          
+          <button class="flex items-center">
+            <img src="../public/images/share.svg" alt="share-icon">
+          </button>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 </body>
 </html>
