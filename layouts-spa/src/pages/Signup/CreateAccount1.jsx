@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import SignupHeader from "../../components/Signup/SignupHeader";
 import Input from "../../components/Input";
 
 function CreateAccount1() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen font-inter text-twitter-neutral-50 pb-5 px-[15px] bg-black flex flex-col justify-between items-start flex-shrink-0">
       <section className="flex flex-col items-start gap-3 self-stretch">
@@ -157,13 +159,12 @@ function CreateAccount1() {
 
       {/* Create Account Button*/}
       <section className="self-stretch">
-        <a
-          href="./create-account2.html"
+        <button
           className="w-full py-3 px-6 rounded-signup-radius bg-twitter-neutral-50 hover:bg-twitter-neutral-200 text-black font-bold leading-normal flex justify-center items-center shadow-signup backdrop-blur-xl-1"
-          rel="noopener noreferrer"
+          onClick={() => navigate('/signup2')}
         >
-          <button>Create account</button>
-        </a>
+          Create account
+        </button>
       </section>
     </div>
   );
