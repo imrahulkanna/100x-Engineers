@@ -1,8 +1,11 @@
 import React from 'react';
 
-function Img({imgPath, imgAlt}) {
+function Img({imgPath, imgAlt, onClick}) {
   return (
-    <img src={imgPath} alt={imgAlt}/>
+    <img
+      src={imgPath}
+      alt={imgAlt}
+    />
   );
 }  
 

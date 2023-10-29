@@ -6,12 +6,14 @@ import logoX from '../assets/x.svg';
 function Login() {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="min-h-screen bg-black text-twitter-neutral-50 font-inter flex flex-col justify-center">
+
       {/* Logo */}
       <header className="w-full py-3 px-4 flex justify-center items-end absolute top-0">
         <img src={logo100} alt="100-icon" />
         <img src={logoX} alt="100-icon" />
       </header>
+
       {/* Sign in */}
       <main className="px-7 flex flex-col items-start gap-10">
         <div className="flex flex-col items-start self-stretch gap-3">
@@ -20,13 +22,12 @@ function Login() {
           </p>
           <p className="text-base leading-normal font-medium">Join today.</p>
         </div>
-        <a
-          href="./create-account1.html"
+        <button 
+          onClick={() => navigate('/signup')} 
           className="w-full py-2 px-6 rounded-signup-radius bg-twitter-neutral-50 hover:bg-twitter-neutral-200 text-black font-bold leading-normal flex justify-center items-center shadow-signup backdrop-blur-xl-1"
-          rel="noopener noreferrer"
         >
-          <button>Create account</button>
-        </a>
+          Create account
+        </button>
         <div className="w-full flex justify-center items-center self-stretch gap-1">
           <div className="w-full h-px bg-neutral-700" />
           <p>or</p>
