@@ -74,11 +74,9 @@ function Profile() {
           style="w-20 h-20 rounded-full border-4 border-black absolute left-4 top-0 -translate-y-1/2"
         />
         <div className="w-full flex justify-end">
-          <a href="./edit-profile.html">
-            <button className="py-2 px-5 justify-center items-center rounded-twitter border border-button-stroke">
-              Edit profile
-            </button>
-          </a>
+          <button onClick={() => navigate('/edit-profile')} className="py-2 px-5 justify-center items-center rounded-twitter border border-button-stroke">
+            Edit profile
+          </button>  
         </div>
         <div className="self-stretch flex flex-col gap-4">
           <div className="self-stretch flex flex-col gap-1 leading-normal">

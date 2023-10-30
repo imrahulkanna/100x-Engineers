@@ -6,6 +6,7 @@ import CreateAccount2 from "./pages/Signup/CreateAccount2";
 import CreateAccount3 from "./pages/Signup/CreateAccount3";
 import CreateAccount4 from "./pages/Signup/CreateAccount4";
 import Profile from "./pages/Profile/Profile";
+import EditProfile from "./pages/Profile/EditProfile";
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/edit-profile",
+    element: <EditProfile />,
   },
 ]);
 
