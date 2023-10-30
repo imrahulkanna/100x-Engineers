@@ -5,6 +5,7 @@ import CreateAccount1 from "./pages/Signup/CreateAccount1";
 import CreateAccount2 from "./pages/Signup/CreateAccount2";
 import CreateAccount3 from "./pages/Signup/CreateAccount3";
 import CreateAccount4 from "./pages/Signup/CreateAccount4";
+import Profile from "./pages/Profile/Profile";
 
 
 const router = createBrowserRouter([
@@ -32,13 +33,15 @@ const router = createBrowserRouter([
     path: "/home",
     element: <Home />,
   },
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
 ]);
 
 function App() {
   return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
+    <RouterProvider router={router} />
   );
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Tweet from '../components/Tweet';
 import logo_100x from "../assets/100x.svg";
 import userDP from '../assets/rahul.jpg'
@@ -11,6 +12,7 @@ import homeSelected from "../assets/home-selected.svg"
 import Img from '../components/Img';
 
 function Home() {
+  const navigate = useNavigate();  
   const tweetDataset = [
     {
       userName: "Name",
@@ -80,13 +82,13 @@ function Home() {
     <div className="min-h-screen text-twitter-neutral-50 font-inter bg-black flex flex-col items-start relative">
       {/* Header - 100xlogo and user dp */}
       <header className="py-3 px-4 self-stretch relative border-b border-twitter-neutral-700">
-        <a href="../user-profile/index.html">
+        <button onClick={()=>navigate('/profile')}>
           <img
             src={userDP}
             alt="user-dp"
             className="w-9 h-9 rounded-full object-cover"
           />
-        </a>
+        </button>
         <img
           src={logo_100x}
           alt="100x"
