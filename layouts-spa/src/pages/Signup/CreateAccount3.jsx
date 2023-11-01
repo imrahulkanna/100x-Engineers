@@ -6,7 +6,7 @@ import Input from "../../components/Input";
 function CreateAccount3() {
   const navigate = useNavigate();
   return (
-    <div class="min-h-screen font-inter text-twitter-neutral-50 pb-5 px-[15px] bg-black flex flex-col justify-between items-start flex-shrink-0">
+    <div className="min-h-screen font-inter text-twitter-neutral-50 pb-5 px-[15px] bg-black flex flex-col justify-between items-start flex-shrink-0">
       <section className="flex flex-col items-start gap-3 self-stretch">
         {/* Header */}
         <SignupHeader step={3} />

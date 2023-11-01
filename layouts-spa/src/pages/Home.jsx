@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Tweet from '../components/Tweet';
+import Img from '../components/Img';
 import logo_100x from "../assets/100x.svg";
 import userDP from '../assets/rahul.jpg'
 import composeIcon from "../assets/createTweet.svg";
@@ -9,7 +10,7 @@ import avatar2 from "../assets/avatars/avatar2.png";
 import avatar3 from "../assets/avatars/avatar3.png";
 import profile from "../assets/profile.svg";
 import homeSelected from "../assets/home-selected.svg"
-import Img from '../components/Img';
+import Icon from '../components/Icon';
 
 function Home() {
   const navigate = useNavigate();  
@@ -82,17 +83,17 @@ function Home() {
     <div className="min-h-screen text-twitter-neutral-50 font-inter bg-black flex flex-col items-start relative">
       {/* Header - 100xlogo and user dp */}
       <header className="py-3 px-4 self-stretch relative border-b border-twitter-neutral-700">
-        <button onClick={()=>navigate('/profile')}>
-          <img
-            src={userDP}
-            alt="user-dp"
-            className="w-9 h-9 rounded-full object-cover"
+        <a onClick={() => navigate("/profile")}>
+          <Img
+            imgPath={userDP}
+            imgAlt="user-dp"
+            style="w-9 h-9 rounded-full object-cover"
           />
-        </button>
-        <img
-          src={logo_100x}
-          alt="100x"
-          className="peer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+        </a>
+        <Img
+          imgPath={logo_100x}
+          imgAlt="100x"
+          style="peer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
         />
         <div className="hidden py-3 px-8 bg-searchbar-fill rounded-[100px] text-base-1 leading-normal fixed bottom-[4.5rem] left-1/2 -translate-x-1/2 peer-active:block">
           Copied to Clipboard
@@ -131,19 +132,18 @@ function Home() {
         })}
       </main>
 
-      <button onClick={() => navigate('/compose-tweet')} className="p-4 bg-twitter-blue rounded-full fixed bottom-[5rem] right-[1rem]">
+      <button
+        onClick={() => navigate("/compose-tweet")}
+        className="p-4 bg-twitter-blue rounded-full fixed bottom-[5rem] right-[1rem]"
+      >
         <Img imgPath={composeIcon} imgAlt="create-tweet" />
       </button>
 
       {/* Footer nav */}
       <footer className="py-[18px] px-6 bg-black border-t border-twitter-neutral-700 sticky bottom-0 self-stretch flex justify-center items-center gap-10">
-        <a href>
-          <Img imgPath={homeSelected} imgAlt="home-selected-icon" />
-        </a>
-        <a href="../user-profile/index.html">
-          <Img imgPath={profile} imgAlt="profile-icon" />
-        </a>
-
+        <Icon variant='nav-icon' iconPath={[homeSelected]} iconAlt="home-selected-icon" 
+        link={'/home'}/>
+        <Icon variant='nav-icon' iconPath={[profile]} iconAlt="profile-icon" link={'/profile'}/>
       </footer>
     </div>
   );
