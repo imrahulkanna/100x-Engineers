@@ -7,8 +7,10 @@ const Input = ({type, children}) => {
     'Day': "3/12",
     'Year': "3/12",
   };
+  console.log(size)
 
   const w_size = size[type]? size[type] : 'full';
+  console.log(w_size)
 
   const style = `group w-${w_size} pt-2  pb-4 px-3 border border-twitter-neutral-500 rounded-[4px] flex items-center focus-within:outline-none focus-within:border-twitter-blue focus-within:ring-twitter-blue`;
 

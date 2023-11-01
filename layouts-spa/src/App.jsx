@@ -7,6 +7,7 @@ import CreateAccount3 from "./pages/Signup/CreateAccount3";
 import CreateAccount4 from "./pages/Signup/CreateAccount4";
 import Profile from "./pages/Profile/Profile";
 import EditProfile from "./pages/Profile/EditProfile";
+import ComposeTweet from "./pages/ComposeTweet";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/edit-profile",
     element: <EditProfile />,
+  },
+  {
+    path: "/compose-tweet",
+    element: <ComposeTweet />,
   },
 ]);
 

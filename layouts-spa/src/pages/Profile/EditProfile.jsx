@@ -15,7 +15,7 @@ function EditProfile() {
       <header className="py-3 px-4 flex justify-between items-center">
         <div className="flex gap-5">
           {/* Back arrow */}
-          <div onClick={() => navigate(-1)}>
+          <div onClick={() => navigate(-1)} className='cursor-pointer'>
             <Img imgPath={backArrow} imgAlt="back-arrow" />
           </div>
           <p>Edit Profile</p>

@@ -131,11 +131,9 @@ function Home() {
         })}
       </main>
 
-      <a href="../compose-tweet/index.html">
-        <button className="p-4 bg-twitter-blue rounded-full fixed bottom-[5rem] right-[1rem]">
-          <Img imgPath={composeIcon} imgAlt="create-tweet" />
-        </button>
-      </a>
+      <button onClick={() => navigate('/compose-tweet')} className="p-4 bg-twitter-blue rounded-full fixed bottom-[5rem] right-[1rem]">
+        <Img imgPath={composeIcon} imgAlt="create-tweet" />
+      </button>
 
       {/* Footer nav */}
       <footer className="py-[18px] px-6 bg-black border-t border-twitter-neutral-700 sticky bottom-0 self-stretch flex justify-center items-center gap-10">
