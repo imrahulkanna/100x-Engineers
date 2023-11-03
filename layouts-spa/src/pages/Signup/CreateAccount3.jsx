@@ -1,7 +1,9 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import SignupHeader from '../../components/Signup/SignupHeader';
+import Fieldset from "../../components/Fieldset";
 import Input from "../../components/Input";
+
 
 function CreateAccount3() {
   const navigate = useNavigate();
@@ -22,13 +24,12 @@ function CreateAccount3() {
             </p>
           </section>
           <section className="flex flex-col items-end self-stretch gap-3">
-            <Input type={"Verification code"}>
-              <input
+            <Fieldset type={"Verification code"}>
+              <Input
                 type="text"
                 placeholder="Verification code"
-                className="w-full bg-transparent  placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-base leading-normal focus:outline-none"
               />
-            </Input>
+            </Fieldset>
             <a
               href="https://www.twitter.com"
               target="_blank"

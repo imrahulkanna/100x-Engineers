@@ -1,6 +1,7 @@
 import React from 'react';
 import SignupHeader from '../../components/Signup/SignupHeader';
-import Input from '../../components/Input';
+import Fieldset from '../../components/Fieldset';
+import Input from "../../components/Input";
 import Img from '../../components/Img';
 import eyeIcon from '../../assets/visible-t.svg'
 import { useNavigate } from 'react-router-dom';
@@ -24,14 +25,13 @@ function CreateAccount4() {
             </p>
           </section>
           <section className="self-stretch">
-            <Input type={"Password"}>
-              <input
+            <Fieldset type={"Password"}>
+              <Input
                 type="password"
                 placeholder="Password"
-                className="w-full bg-transparent  placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-base leading-normal focus:outline-none"
               />
               <Img imgPath={eyeIcon} imgAlt="visible-t-icon" style="w-6 h-6" />
-            </Input>
+            </Fieldset>
           </section>
         </main>
       </section>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Input from '../../components/Input'
+import Fieldset from '../../components/Fieldset';
+import Input from '../../components/Input';
 import Img from "../../components/Img";
 import backArrow from "../../assets/back.svg";
 import banner from "../../assets/banner.jpg";
@@ -67,18 +68,17 @@ function EditProfile() {
       {/* User details edit section */}
       <main className="py-3 px-4 flex flex-col gap-5">
         <section className="self-stretch">
-          <Input type={"Name"}>
-            <input
+          <Fieldset type={"Name"}>
+            <Input
               type="text"
               placeholder="Name"
               defaultValue="Rahul Kanna"
-              className="w-full bg-transparent  placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-base leading-normal focus:outline-none"
             />
-          </Input>
+          </Fieldset>
         </section>
 
         <section>
-          <Input type={"Bio"}>
+          <Fieldset type={"Bio"}>
             <textarea
               name="tweet-content"
               placeholder="Bio"
@@ -91,29 +91,27 @@ function EditProfile() {
                 "Techie | Otaku | Learner, Dreamer, Doer. I tweet about web dev and anime. #codelove dattebayo 🎶"
               }
             />
-          </Input>
+          </Fieldset>
         </section>
 
         <section>
-          <Input type={"Location"}>
-            <input
+          <Fieldset type={"Location"}>
+            <Input
               type="text"
               placeholder="Location"
               defaultValue="Hyderabad, Telangana"
-              className="w-full bg-transparent  placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-base leading-normal focus:outline-none"
             />
-          </Input>
+          </Fieldset>
         </section>
 
         <section>
-          <Input type={"Webiste"}>
-            <input
+          <Fieldset type={"Website"}>
+            <Input
               type="text"
               placeholder="Website"
               defaultValue="https://www.github.com/imrahulkanna"
-              className="w-full bg-transparent  placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-base leading-normal focus:outline-none"
             />
-          </Input>
+          </Fieldset>
         </section>
       </main>
     </div>

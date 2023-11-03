@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import SignupHeader from '../../components/Signup/SignupHeader';
-import Input from '../../components/Input';
+import Fieldset from '../../components/Fieldset';
+import Input from "../../components/Input";
 
 function CreateAccount2() {
   const navigate = useNavigate();
@@ -17,32 +18,29 @@ function CreateAccount2() {
             Create your account
           </h1>
           <form className="flex flex-col items-start gap-8 self-stretch">
-            {/* Name Input */}
-            <Input type={"Name"}>
-              <input
+            {/* Name Fieldset */}
+            <Fieldset type={"Name"}>
+              <Input
                 type="text"
                 placeholder="Name"
-                className="w-full bg-transparent  placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-base leading-normal focus:outline-none"
               />
-            </Input>
+            </Fieldset>
 
-            {/* Email Input */}
-            <Input type={"Email"}>
-              <input
+            {/* Email Fieldset */}
+            <Fieldset type={"Email"}>
+              <Input
                 type="text"
                 placeholder="Email"
-                className="w-full bg-transparent  placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-base leading-normal focus:outline-none"
               />
-            </Input>
+            </Fieldset>
 
             {/* Date of Birth */}
-            <Input type={"Date of birth"}>
-              <input
+            <Fieldset type={"Date of birth"}>
+              <Input
                 type="text"
                 placeholder="Date of birth"
-                className="w-full bg-transparent  placeholder:text-twitter-neutral-500 text-twitter-neutral-50 text-base leading-normal focus:outline-none"
               />
-            </Input>
+            </Fieldset>
           </form>
         </main>
       </section>
