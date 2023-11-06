@@ -1,13 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SignupHeader from '../../components/Signup/SignupHeader';
 import Fieldset from '../../components/Fieldset';
 import Input from "../../components/Input";
 import Img from '../../components/Img';
 import eyeIcon from '../../assets/visible-t.svg'
+import eyeIconActive from "../../assets/visible-t-blue.svg";
 import { useNavigate } from 'react-router-dom';
 
 function CreateAccount4() {
   const navigate = useNavigate();
+  const [type, setType] = useState("password")
+  const [icon, setIcon] = useState(eyeIcon);
+
+  const togglePassWordDisplay = () => {
+    if(type === 'password') {
+      setType('text');
+      setIcon(eyeIconActive)
+    } else {
+      setType('password');
+      setIcon(eyeIcon);
+    }
+  }
+
   return (
     <div className="min-h-screen font-inter text-twitter-neutral-50 pb-5 px-[15px] bg-black flex flex-col justify-between items-start flex-shrink-0">
       <section className="flex flex-col items-start gap-3 self-stretch">
@@ -26,8 +40,9 @@ function CreateAccount4() {
           </section>
           <section className="self-stretch">
             <Fieldset type={"Password"}>
-              <Input type="password" placeholder="Password" />
-              <Img imgPath={eyeIcon} imgAlt="visible-t-icon" style="w-6 h-6" />
+              <Input type={type} placeholder="Password" />
+              <Img imgPath={icon} imgAlt="visible-t-icon" style='w-6 h-6' 
+              onClick={togglePassWordDisplay}/>
             </Fieldset>
           </section>
         </main>
