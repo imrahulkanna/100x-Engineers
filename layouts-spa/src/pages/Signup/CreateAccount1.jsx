@@ -63,8 +63,8 @@ function CreateAccount1() {
             <div className="flex items-start self-stretch gap-3">
               {/* Month */}
               <Fieldset type={"Month"} size="1/2">
-                <Select name="month-dropdown">
-                  <SelectItem value={""} selected disabled />
+                <Select name="Month">
+                  <SelectItem value={""} disabled />
                   {months.map((month) => (
                     <SelectItem key={month} value={month} />
                   ))}
@@ -73,8 +73,8 @@ function CreateAccount1() {
 
               {/* Day */}
               <Fieldset type={"Day"} size="1/4">
-                <Select name="day-dropdown">
-                  <SelectItem value="" selected disabled />
+                <Select name="Day">
+                  <SelectItem value="" disabled />
                   {dates.map((date) => (
                     <SelectItem key={date} value={date} />
                   ))}
@@ -83,8 +83,8 @@ function CreateAccount1() {
 
               {/* Year */}
               <Fieldset type={"Year"} size="1/4">
-                <Select name="year-dropdown">
-                  <SelectItem value="" selected disabled />
+                <Select name="Year">
+                  <SelectItem value="" disabled />
                   {years.map((year) => (
                     <SelectItem key={year} value={year} />
                   ))}

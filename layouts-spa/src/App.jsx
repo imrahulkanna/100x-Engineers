@@ -8,6 +8,8 @@ import CreateAccount4 from "./pages/Signup/CreateAccount4";
 import Profile from "./pages/Profile/Profile";
 import EditProfile from "./pages/Profile/EditProfile";
 import ComposeTweet from "./pages/ComposeTweet";
+import AuthProvider from "./context/AuthContext";
+
 
 
 const router = createBrowserRouter([
@@ -51,7 +53,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   );
 }
 

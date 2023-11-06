@@ -4,7 +4,6 @@ import SignupHeader from '../../components/Signup/SignupHeader';
 import Fieldset from "../../components/Fieldset";
 import Input from "../../components/Input";
 
-
 function CreateAccount3() {
   const navigate = useNavigate();
   return (
@@ -25,10 +24,7 @@ function CreateAccount3() {
           </section>
           <section className="flex flex-col items-end self-stretch gap-3">
             <Fieldset type={"Verification code"}>
-              <Input
-                type="text"
-                placeholder="Verification code"
-              />
+              <Input type="text" placeholder="Verification code" />
             </Fieldset>
             <a
               href="https://www.twitter.com"
@@ -46,7 +42,7 @@ function CreateAccount3() {
       <section className="self-stretch">
         <button
           className="w-full py-3 px-6 rounded-signup-radius bg-twitter-neutral-50 hover:bg-twitter-neutral-200 text-black font-bold leading-normal flex justify-center items-center shadow-signup backdrop-blur-xl-1"
-          onClick={() => navigate('/signup4')}
+          onClick={() => navigate("/signup4")}
         >
           Next
         </button>

@@ -26,10 +26,7 @@ function CreateAccount4() {
           </section>
           <section className="self-stretch">
             <Fieldset type={"Password"}>
-              <Input
-                type="password"
-                placeholder="Password"
-              />
+              <Input type="password" placeholder="Password" />
               <Img imgPath={eyeIcon} imgAlt="visible-t-icon" style="w-6 h-6" />
             </Fieldset>
           </section>
@@ -38,9 +35,9 @@ function CreateAccount4() {
 
       {/* Next Button */}
       <section className="self-stretch">
-        <button 
+        <button
           className="w-full py-3 px-6 rounded-signup-radius bg-twitter-neutral-50 hover:bg-twitter-neutral-200 text-black font-bold leading-normal flex justify-center items-center shadow-signup backdrop-blur-xl-1"
-          onClick={() => navigate('/home')}
+          onClick={() => navigate("/home")}
         >
           Next
         </button>

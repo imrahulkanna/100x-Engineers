@@ -10,7 +10,6 @@ const Fieldset = ({type, size='full', children}) => {
   const sizeClass = sizeClasses[size];
 
   const style = `group ${sizeClass} pt-2  pb-4 px-3 border border-twitter-neutral-500 rounded-[4px] flex items-center focus-within:outline-none focus-within:border-twitter-blue focus-within:ring-twitter-blue`;
-  console.log(style);
 
   return (
     <fieldset className={style}>
