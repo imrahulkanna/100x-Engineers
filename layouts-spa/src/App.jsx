@@ -9,7 +9,7 @@ import Profile from "./pages/Profile/Profile";
 import EditProfile from "./pages/Profile/EditProfile";
 import ComposeTweet from "./pages/ComposeTweet";
 import AuthProvider from "./context/AuthContext";
-
+import TweetProvider from "./context/TweetContext";
 
 
 const router = createBrowserRouter([
@@ -54,7 +54,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <TweetProvider>
+        <RouterProvider router={router} />
+      </TweetProvider>
     </AuthProvider>
   );
 }

@@ -2,83 +2,18 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Tweet from '../components/Tweet';
 import Img from '../components/Img';
+import Icon from '../components/Icon';
+import { useTweetData } from '../context/TweetContext';
 import logo_100x from "../assets/100x.svg";
 import userDP from '../assets/rahul.jpg'
 import composeIcon from "../assets/createTweet.svg";
-import avatar1 from "../assets/avatars/avatar1.png";
-import avatar2 from "../assets/avatars/avatar2.png";
-import avatar3 from "../assets/avatars/avatar3.png";
 import profile from "../assets/profile.svg";
 import homeSelected from "../assets/home-selected.svg"
-import Icon from '../components/Icon';
 
 function Home() {
   const navigate = useNavigate();  
-  const tweetDataset = [
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "32m",
-      content: `Don't wish for it, work for it.`,
-      avatar: avatar1,
-    },
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "10h",
-      content: `i've seen people absolutely despise auto layout in figma but i think it's a lifesaver-
-              1. tidies everything nice and compact
-              2. makes responsive design effortless
-              3. no manual adjustments post any tweaks
-              4. saves a tonnn of time
-
-              sorry, but will stay an auto layout maxi all life.`,
-      avatar: avatar2,
-    },
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "12h",
-      content: `Writing gets easier after the first sentence.
-              
-              Lifting gets easier after the first set.
-              
-              People think and think and think until they finally decide to act. Their attention shifts from internal to external, and the difficulty they created in their mind vanishes.`,
-      avatar: avatar3,
-    },
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "32m",
-      content: `Don't wish for it, work for it.`,
-      avatar: avatar1,
-    },
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "10h",
-      content: `i've seen people absolutely despise auto layout in figma but i think it's a lifesaver-
-              1. tidies everything nice and compact
-              2. makes responsive design effortless
-              3. no manual adjustments post any tweaks
-              4. saves a tonnn of time
-
-              sorry, but will stay an auto layout maxi all life.`,
-      avatar: avatar2,
-    },
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "12h",
-      content: `Writing gets easier after the first sentence.
-              
-              Lifting gets easier after the first set.
-              
-              People think and think and think until they finally decide to act. Their attention shifts from internal to external, and the difficulty they created in their mind vanishes.`,
-      avatar: avatar3,
-    },
-  ];
-
+  const {tweetDataset} = useTweetData();
+  
   return (
     <div className="min-h-screen text-twitter-neutral-50 font-inter bg-black flex flex-col items-start relative">
       {/* Header - 100xlogo and user dp */}
@@ -118,15 +53,17 @@ function Home() {
 
       {/* Tweets */}
       <main className="self-stretch flex flex-col flex-1">
-        {tweetDataset.map((tweetData, key) => {
+        {tweetDataset.map((tweetData) => {
           return (
             <Tweet
-              key={key}
+              key={tweetData.id}
+              id={tweetData.id}
               userName={tweetData.userName}
               handleName={tweetData.handleName}
               tweetPostedTime={tweetData.tweetPostedTime}
               content={tweetData.content}
               avatar={tweetData.avatar}
+              tweetIconDetails={tweetData.tweetIconDetails}
             />
           );
         })}
@@ -141,9 +78,18 @@ function Home() {
 
       {/* Footer nav */}
       <footer className="py-[18px] px-6 bg-black border-t border-twitter-neutral-700 sticky bottom-0 self-stretch flex justify-center items-center gap-10">
-        <Icon variant='nav-icon' iconPath={[homeSelected]} iconAlt="home-selected-icon" 
-        link={'/home'}/>
-        <Icon variant='nav-icon' iconPath={[profile]} iconAlt="profile-icon" link={'/profile'}/>
+        <Icon
+          variant="nav-icon"
+          iconPath={[homeSelected]}
+          iconAlt="home-selected-icon"
+          link={"/home"}
+        />
+        <Icon
+          variant="nav-icon"
+          iconPath={[profile]}
+          iconAlt="profile-icon"
+          link={"/profile"}
+        />
       </footer>
     </div>
   );

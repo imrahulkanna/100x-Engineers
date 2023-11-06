@@ -1,11 +1,22 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTweetData } from '../context/TweetContext';
 import Img from './Img';
 
-const Icon = ({variant='tweet-icon',iconPath, iconName, iconCount=0, style='', link=''}) => {
+const Icon = ({
+  id, 
+  variant='tweet-icon',
+  iconPath, 
+  iconName, 
+  iconCount=0, 
+  style='', 
+  link=''
+}) => {
+
   const [toggleCount, setToggleCount] = useState([iconCount,false]);
   const navigate = useNavigate();
+  const { setIconCount } = useTweetData();
   const currentIcon = (toggleCount[1] ? iconPath[1] : iconPath[0]) || iconPath[0];
   
   function formatCountValue(value) {
@@ -35,10 +46,11 @@ const Icon = ({variant='tweet-icon',iconPath, iconName, iconCount=0, style='', l
     } 
     let count = parseCountValue(toggleCount[0]);
     const newCount = toggleCount[1] ? count - 1 : count + 1;
-    const newToggleCount = [formatCountValue(newCount), !toggleCount[1]];
+    const formatedNewCount = formatCountValue(newCount);
+    const newToggleCount = [formatedNewCount, !toggleCount[1]];
     setToggleCount(newToggleCount);
+    setIconCount(id, iconName, formatedNewCount);
   }
-
   const handleNavIconClick = () => navigate(link);
 
   return (
