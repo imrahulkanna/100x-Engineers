@@ -4,6 +4,7 @@ import Tweet from '../components/Tweet';
 import Img from '../components/Img';
 import Icon from '../components/Icon';
 import { useTweetData } from '../context/TweetContext';
+import Navbar from '../components/Navbar';
 import logo_100x from "../assets/100x.svg";
 import userDP from '../assets/rahul.jpg'
 import composeIcon from "../assets/createTweet.svg";
@@ -36,20 +37,7 @@ function Home() {
       </header>
 
       {/* Navbar */}
-      <nav className="self-stretch flex border-b border-twitter-neutral-700 cursor-pointer">
-        <div className="w-1/2 flex justify-center hover:bg-twitter-neutral-900">
-          <div className="pt-5 flex flex-col gap-3">
-            <p className="text-twitter-neutral-400">For you</p>
-            <div className="w-full h-[3px] rounded-twitter bg-twitter-blue" />
-          </div>
-        </div>
-        <div className="w-1/2 flex justify-center hover:bg-twitter-neutral-900">
-          <div className="pt-5 flex flex-col gap-3">
-            <p className>Following</p>
-            <div className="hidden w-full h-[3px] rounded-twitter bg-twitter-blue" />
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Tweets */}
       <main className="self-stretch flex flex-col flex-1">
