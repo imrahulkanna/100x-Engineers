@@ -43,6 +43,7 @@ function Tweet({
                   iconPath={icon.svg}
                   iconName={icon.name}
                   iconCount={icon.count}
+                  isToggle={icon.isToggle}
                   style={"flex items-center gap-[5px]"}
                 />
               );

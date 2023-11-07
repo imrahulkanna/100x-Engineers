@@ -10,11 +10,11 @@ const Icon = ({
   iconPath, 
   iconName, 
   iconCount=0, 
+  isToggle,
   style='', 
   link=''
 }) => {
-
-  const [toggleCount, setToggleCount] = useState([iconCount,false]);
+  const [toggleCount, setToggleCount] = useState([iconCount, isToggle]);
   const navigate = useNavigate();
   const { setIconCount } = useTweetData();
   const currentIcon = (toggleCount[1] ? iconPath[1] : iconPath[0]) || iconPath[0];

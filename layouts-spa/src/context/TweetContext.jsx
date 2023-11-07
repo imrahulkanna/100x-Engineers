@@ -223,25 +223,30 @@ const TweetProvider = ({ children }) => {
           name: "comment",
           svg: [commentIcon],
           count: "11",
+          isToggle: false,
         },
         {
           name: "retweet",
           svg: [retweetIcon, retweetIconActive],
           count: "270",
+          isToggle: false,
         },
         {
           name: "heart",
           svg: [heartIcon, heartIconActive],
           count: "1,869",
+          isToggle: false,
         },
         {
           name: "reach",
           svg: [reachIcon, reachIconActive],
           count: "99.6k",
+          isToggle: false,
         },
         {
           name: "share",
           svg: [shareIcon, shareIconActive],
+          isToggle: false,
         },
       ],
     },
@@ -253,7 +258,10 @@ const TweetProvider = ({ children }) => {
     const updatedTweetData = tweetDataset.map(tweet => {
       if(tweet.id === id) {
         tweet.tweetIconDetails.map(icon=>{
-          if(icon.name === iconName) icon.count=count;
+          if(icon.name === iconName) {
+            icon.count=count;
+            icon.isToggle = !icon.isToggle
+          }
         })
       } 
       return tweet;
