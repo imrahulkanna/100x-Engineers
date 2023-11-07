@@ -22,7 +22,7 @@ export const useTweetData = () => {
 const TweetProvider = ({ children }) => {
   const tweetData = [
     {
-      id: 6,
+      id: 8,
       userName: "Name",
       handleName: "handle",
       tweetPostedTime: "32m",
@@ -56,7 +56,7 @@ const TweetProvider = ({ children }) => {
       ],
     },
     {
-      id: 5,
+      id: 7,
       userName: "Name",
       handleName: "handle",
       tweetPostedTime: "10h",
@@ -96,7 +96,7 @@ const TweetProvider = ({ children }) => {
       ],
     },
     {
-      id: 4,
+      id: 6,
       userName: "Name",
       handleName: "handle",
       tweetPostedTime: "12h",
@@ -134,7 +134,7 @@ const TweetProvider = ({ children }) => {
       ],
     },
     {
-      id: 3,
+      id: 5,
       userName: "Name",
       handleName: "handle",
       tweetPostedTime: "23h",
@@ -168,7 +168,46 @@ const TweetProvider = ({ children }) => {
       ],
     },
     {
-      id: 2,
+      id: 4,
+      userName: "Rahul Kanna",
+      handleName: "imrahulkanna",
+      tweetPostedTime: "Nov 1",
+      content: `Today we had our first session of the @100xengineers AI-paced full-stack development cohort. It was really an amazing session packed with cool activities. All thanks to @swanand, @siddhant and @tejas. Excited and looking forward to the upcoming sessions and challenges.`,
+      avatar: userDP,
+      tweetIconDetails: [
+        {
+          name: "comment",
+          svg: [commentIcon],
+          count: "11",
+          isToggle: false,
+        },
+        {
+          name: "retweet",
+          svg: [retweetIcon, retweetIconActive],
+          count: "270",
+          isToggle: false,
+        },
+        {
+          name: "heart",
+          svg: [heartIcon, heartIconActive],
+          count: "1,869",
+          isToggle: false,
+        },
+        {
+          name: "reach",
+          svg: [reachIcon, reachIconActive],
+          count: "99.6k",
+          isToggle: false,
+        },
+        {
+          name: "share",
+          svg: [shareIcon, shareIconActive],
+          isToggle: false,
+        },
+      ],
+    },
+    {
+      id: 3,
       userName: "Name",
       handleName: "handle",
       tweetPostedTime: "Oct 31",
@@ -208,7 +247,7 @@ const TweetProvider = ({ children }) => {
       ],
     },
     {
-      id: 1,
+      id: 2,
       userName: "Name",
       handleName: "handle",
       tweetPostedTime: "Oct 5",
@@ -218,6 +257,49 @@ const TweetProvider = ({ children }) => {
               
               People think and think and think until they finally decide to act. Their attention shifts from internal to external, and the difficulty they created in their mind vanishes.`,
       avatar: avatar3,
+      tweetIconDetails: [
+        {
+          name: "comment",
+          svg: [commentIcon],
+          count: "11",
+          isToggle: false,
+        },
+        {
+          name: "retweet",
+          svg: [retweetIcon, retweetIconActive],
+          count: "270",
+          isToggle: false,
+        },
+        {
+          name: "heart",
+          svg: [heartIcon, heartIconActive],
+          count: "1,869",
+          isToggle: false,
+        },
+        {
+          name: "reach",
+          svg: [reachIcon, reachIconActive],
+          count: "99.6k",
+          isToggle: false,
+        },
+        {
+          name: "share",
+          svg: [shareIcon, shareIconActive],
+          isToggle: false,
+        },
+      ],
+    },
+    {
+      id: 1,
+      userName: "Rahul Kanna",
+      handleName: "imrahulkanna",
+      tweetPostedTime: "Oct 23",
+      content: `This match and this man will be cherished and remembered forever.
+
+      The 2 sixes in the 19th over were game-changing ... especially the one from the backfoot. GOOSEBUMPS at peaks
+
+      "KOHLI GOES DOWN THE GROUND, KOHLI GOES OUT OF THE GROUND" was the best sentence of that evening.`,
+      avatar: userDP,
       tweetIconDetails: [
         {
           name: "comment",
@@ -269,8 +351,46 @@ const TweetProvider = ({ children }) => {
     setTweetDataset(updatedTweetData);
   }
 
+  function addTweet(tweetContent) {
+    const newTweet = {
+      id: tweetDataset.length+1,
+      userName: "Rahul Kanna",
+      handleName: "imrahulkanna",
+      tweetPostedTime: "2s",
+      content: tweetContent,
+      avatar: userDP,
+      tweetIconDetails: [
+        {
+          name: "comment",
+          svg: [commentIcon],
+          count: "0",
+        },
+        {
+          name: "retweet",
+          svg: [retweetIcon, retweetIconActive],
+          count: "0",
+        },
+        {
+          name: "heart",
+          svg: [heartIcon, heartIconActive],
+          count: "0",
+        },
+        {
+          name: "reach",
+          svg: [reachIcon, reachIconActive],
+          count: "0",
+        },
+        {
+          name: "share",
+          svg: [shareIcon, shareIconActive],
+        },
+      ],
+    };
+    setTweetDataset([newTweet, ...tweetDataset])
+  }
+
   return (
-    <TweetContext.Provider value={{ tweetDataset, setIconCount }}>
+    <TweetContext.Provider value={{ tweetDataset, setIconCount, addTweet }}>
       {children}
     </TweetContext.Provider>
   );  

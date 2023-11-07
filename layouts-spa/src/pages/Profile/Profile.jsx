@@ -2,55 +2,18 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Tweet from '../../components/Tweet';
 import Img from '../../components/Img';
+import { useTweetData } from '../../context/TweetContext';
 import backArrow from '../../assets/back.svg';
 import banner from '../../assets/banner.jpg';
 import userDP from '../../assets/rahul.jpg';
-import linkIcon from '../../assets/link.svg'
+import linkIcon from '../../assets/link.svg';
 import calendar from "../../assets/calendar.svg";
 import composeIcon from '../../assets/createTweet.svg'
 
 function Profile() {
   const navigate = useNavigate();
-  const tweetDataset = [
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "32m",
-      content: `Don't wish for it, work for it.`,
-      avatar: userDP,
-    },
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "10h",
-      content: `i've seen people absolutely despise auto layout in figma but i think it's a lifesaver-
-              1. tidies everything nice and compact
-              2. makes responsive design effortless
-              3. no manual adjustments post any tweaks
-              4. saves a tonnn of time
-
-              sorry, but will stay an auto layout maxi all life.`,
-      avatar: userDP,
-    },
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "21h",
-      content: `Writing gets easier after the first sentence.
-              
-              Lifting gets easier after the first set.
-              
-              People think and think and think until they finally decide to act. Their attention shifts from internal to external, and the difficulty they created in their mind vanishes.`,
-      avatar: userDP,
-    },
-    {
-      userName: "Name",
-      handleName: "handle",
-      tweetPostedTime: "Sep 19",
-      content: `Don't wish for it, work for it.`,
-      avatar: userDP,
-    },
-  ];
+  const {tweetDataset} = useTweetData();
+  
   return (
     <div className="min-h-screen bg-black font-inter text-twitter-neutral-50 flex flex-col relative">
       {/* Back arrow */}
@@ -74,9 +37,12 @@ function Profile() {
           style="w-20 h-20 rounded-full border-4 border-black absolute left-4 top-0 -translate-y-1/2"
         />
         <div className="w-full flex justify-end">
-          <button onClick={() => navigate('/edit-profile')} className="py-2 px-5 justify-center items-center rounded-twitter border border-button-stroke">
+          <button
+            onClick={() => navigate("/edit-profile")}
+            className="py-2 px-5 justify-center items-center rounded-twitter border border-button-stroke"
+          >
             Edit profile
-          </button>  
+          </button>
         </div>
         <div className="self-stretch flex flex-col gap-4">
           <div className="self-stretch flex flex-col gap-1 leading-normal">
@@ -86,8 +52,8 @@ function Profile() {
             </p>
           </div>
           <div className="leading-normal">
-            Techie | Otaku | Learner, Dreamer, Doer.
-            I tweet about web dev and anime.
+            Techie | Otaku | Learner, Dreamer, Doer. I tweet about web dev and
+            anime.
             <span className="text-twitter-blue"> #codelove</span> dattebayo 🎶
           </div>
           <div className="self-stretch flex flex-wrap gap-x-5 text-twitter-neutral-500">
@@ -143,21 +109,28 @@ function Profile() {
 
       {/* Tweets Area */}
       <main className="self-stretch flex flex-col">
-        {tweetDataset.map((tweetData, key) => {
-          return (
-            <Tweet
-              key={key}
-              userName={tweetData.userName}
-              handleName={tweetData.handleName}
-              tweetPostedTime={tweetData.tweetPostedTime}
-              content={tweetData.content}
-              avatar={tweetData.avatar}
-            />
-          );
-        })}
+        {tweetDataset
+          .filter((tweetData) => tweetData.handleName === "imrahulkanna")
+          .map((tweetData) => {
+            return (
+              <Tweet
+                key={tweetData.id}
+                id={tweetData.id}
+                userName={tweetData.userName}
+                handleName={tweetData.handleName}
+                tweetPostedTime={tweetData.tweetPostedTime}
+                content={tweetData.content}
+                avatar={tweetData.avatar}
+                tweetIconDetails={tweetData.tweetIconDetails}
+              />
+            );
+          })}
       </main>
-      
-      <button onClick={() => navigate('/compose-tweet')} className="p-4 bg-twitter-blue rounded-full fixed bottom-[2.5rem] right-[1rem]">
+
+      <button
+        onClick={() => navigate("/compose-tweet")}
+        className="p-4 bg-twitter-blue rounded-full fixed bottom-[2.5rem] right-[1rem]"
+      >
         <Img imgPath={composeIcon} imgAlt="create-tweet" />
       </button>
     </div>

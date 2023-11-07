@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTweetData } from '../context/TweetContext';
 import cancel from "../assets/cancel.svg";
 import Img from "../components/Img";
 import userDP from '../assets/rahul.jpg'
@@ -8,7 +9,8 @@ import userDP from '../assets/rahul.jpg'
 function ComposeTweet() {
   const navigate = useNavigate();
   const [newTweet, setNewTweet] = useState('');
-  const [characterCount, setCharacterCount] = useState(0); 
+  const [characterCount, setCharacterCount] = useState(0);
+  const { addTweet } = useTweetData();
 
   const handleChange = (e) => {
     setNewTweet(e.target.value);
@@ -18,7 +20,12 @@ function ComposeTweet() {
     }
     setCharacterCount(currentCount);
   }
-  // console.log(characterCount)
+  
+  const handleClick = () => {
+    addTweet(newTweet);
+    navigate("/home");
+  }
+
   return (
     <div className="min-h-screen bg-black font-inter text-twitter-neutral-50 flex flex-col items-start">
       {/* Header with close & post buttons */}
@@ -28,7 +35,7 @@ function ComposeTweet() {
         </div>
 
         <button
-          onClick={() => navigate("/home")}
+          onClick={handleClick}
           disabled={characterCount <= 0 ? true : false}
           className="py-2 px-6 flex justify-center items-center gap-2.5 rounded-twitter bg-twitter-blue hover:bg-twitter-blue-hover disabled:opacity-50 disabled:hover:bg-twitter-blue md:py-[15px] md:px-[93px] md:rounded-full"
         >
@@ -55,7 +62,7 @@ function ComposeTweet() {
       </main>
 
       <footer className="py-3 px-4 border-t border-twitter-neutral-800 self-stretch text-sm text-twitter-neutral-500 font-semibold">
-        <span className={characterCount >= 0 ? "text-inherit" : "text-red-600"}>
+        <span className={characterCount >= 0 ? "text-inherit" : "text-error"}>
           {characterCount}
         </span>
         /280
