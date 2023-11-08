@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
-const Fieldset = ({type, size='full', children}) => {
+const Fieldset = ({ type, size = "full", children }) => {
   const sizeClasses = {
-    'full': "w-full",
+    full: "w-full",
     "1/2": "w-1/2",
     "1/4": "w-1/4",
   };
@@ -13,12 +13,12 @@ const Fieldset = ({type, size='full', children}) => {
 
   return (
     <fieldset className={style}>
-      <legend className="px-1 text-twitter-neutral-500 text-xs font-medium leading-normal group-focus-within:text-twitter-blue">
+      <legend className="px-1 text-xs font-medium leading-normal text-twitter-neutral-500 group-focus-within:text-twitter-blue">
         {type}
       </legend>
       {children}
     </fieldset>
   );
-}
+};
 
-export default Fieldset
+export default Fieldset;

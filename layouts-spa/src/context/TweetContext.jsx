@@ -1,14 +1,14 @@
-import React, {createContext, useState, useContext} from 'react';
-import commentIcon from '../assets/comment.svg';
+import React, { createContext, useState, useContext } from "react";
+import commentIcon from "../assets/comment.svg";
 import retweetIcon from "../assets/retweet.svg";
-import retweetIconActive from '../assets/retweet-active.svg'
+import retweetIconActive from "../assets/retweet-active.svg";
 import heartIcon from "../assets/heart.svg";
 import heartIconActive from "../assets/heart-active.svg";
 import reachIcon from "../assets/reach.svg";
 import reachIconActive from "../assets/reach-active.svg";
 import shareIcon from "../assets/share.svg";
 import shareIconActive from "../assets/share-active.svg";
-import userDP from '../assets/rahul.jpg';
+import userDP from "../assets/rahul.jpg";
 import avatar1 from "../assets/avatars/avatar1.png";
 import avatar2 from "../assets/avatars/avatar2.png";
 import avatar3 from "../assets/avatars/avatar3.png";
@@ -16,8 +16,8 @@ import avatar3 from "../assets/avatars/avatar3.png";
 const TweetContext = createContext();
 
 export const useTweetData = () => {
-  return useContext(TweetContext)
-}
+  return useContext(TweetContext);
+};
 
 const TweetProvider = ({ children }) => {
   const tweetData = [
@@ -337,23 +337,23 @@ const TweetProvider = ({ children }) => {
   const [tweetDataset, setTweetDataset] = useState(tweetData);
 
   function setIconCount(id, iconName, count) {
-    const updatedTweetData = tweetDataset.map(tweet => {
-      if(tweet.id === id) {
-        tweet.tweetIconDetails.map(icon=>{
-          if(icon.name === iconName) {
-            icon.count=count;
-            icon.isToggle = !icon.isToggle
+    const updatedTweetData = tweetDataset.map((tweet) => {
+      if (tweet.id === id) {
+        tweet.tweetIconDetails.map((icon) => {
+          if (icon.name === iconName) {
+            icon.count = count;
+            icon.isToggle = !icon.isToggle;
           }
-        })
-      } 
+        });
+      }
       return tweet;
-    })
+    });
     setTweetDataset(updatedTweetData);
   }
 
   function addTweet(tweetContent) {
     const newTweet = {
-      id: tweetDataset.length+1,
+      id: tweetDataset.length + 1,
       userName: "Rahul Kanna",
       handleName: "imrahulkanna",
       tweetPostedTime: "2s",
@@ -386,14 +386,14 @@ const TweetProvider = ({ children }) => {
         },
       ],
     };
-    setTweetDataset([newTweet, ...tweetDataset])
+    setTweetDataset([newTweet, ...tweetDataset]);
   }
 
   return (
     <TweetContext.Provider value={{ tweetDataset, setIconCount, addTweet }}>
       {children}
     </TweetContext.Provider>
-  );  
-}
+  );
+};
 
 export default TweetProvider;

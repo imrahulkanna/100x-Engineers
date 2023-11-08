@@ -1,22 +1,22 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Tweet from '../../components/Tweet';
-import Img from '../../components/Img';
-import ProfileHeader from '../../components/ProfileHeader';
-import { useTweetData } from '../../context/TweetContext';
-import backArrow from '../../assets/back.svg';
-import composeIcon from '../../assets/createTweet.svg'
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Tweet from "../../components/Tweet";
+import Img from "../../components/Img";
+import ProfileHeader from "../../components/ProfileHeader";
+import { useTweetData } from "../../context/TweetContext";
+import backArrow from "../../assets/back.svg";
+import composeIcon from "../../assets/createTweet.svg";
 
 function Profile() {
   const navigate = useNavigate();
-  const {tweetDataset} = useTweetData();
-  
+  const { tweetDataset } = useTweetData();
+
   return (
-    <div className="min-h-screen bg-black font-inter text-twitter-neutral-50 flex flex-col relative">
+    <div className="relative flex min-h-screen flex-col bg-black font-inter text-twitter-neutral-50">
       {/* Back arrow */}
       <div
         onClick={() => navigate(-1)}
-        className="p-1 bg-black rounded-full absolute top-4 left-4 cursor-pointer"
+        className="absolute left-4 top-4 cursor-pointer rounded-full bg-black p-1"
       >
         <Img imgPath={backArrow} imgAlt="back-arrow" />
       </div>
@@ -24,7 +24,7 @@ function Profile() {
       <ProfileHeader />
 
       {/* Tweets Area */}
-      <main className="self-stretch flex flex-col">
+      <main className="flex flex-col self-stretch">
         {tweetDataset
           .filter((tweetData) => tweetData.handleName === "imrahulkanna")
           .map((tweetData) => {
@@ -45,7 +45,7 @@ function Profile() {
 
       <button
         onClick={() => navigate("/compose-tweet")}
-        className="p-4 bg-twitter-blue rounded-full fixed bottom-[2.5rem] right-[1rem]"
+        className="fixed bottom-[2.5rem] right-[1rem] rounded-full bg-twitter-blue p-4"
       >
         <Img imgPath={composeIcon} imgAlt="create-tweet" />
       </button>
@@ -53,4 +53,4 @@ function Profile() {
   );
 }
 
-export default Profile
+export default Profile;

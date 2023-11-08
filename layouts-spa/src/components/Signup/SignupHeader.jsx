@@ -9,7 +9,7 @@ function SignupHeader({ step }) {
     navigate("/");
   }
   return (
-    <header className="py-3 flex items-center gap-5 self-stretch">
+    <header className="flex items-center gap-5 self-stretch py-3">
       <button onClick={handleImgClick}>
         <Img imgPath={cancelIcon} imgAlt="cancel-icon" />
       </button>

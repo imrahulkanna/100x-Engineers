@@ -1,14 +1,7 @@
-import React from 'react';
+import React from "react";
 
-function Img({imgPath, imgAlt, style='', ...rest}) {
-  return (
-    <img
-      src={imgPath}
-      alt={imgAlt}
-      className={style}
-      {...rest}
-    />
-  );
-}  
+function Img({ imgPath, imgAlt, style = "", ...rest }) {
+  return <img src={imgPath} alt={imgAlt} className={style} {...rest} />;
+}
 
 export default Img;

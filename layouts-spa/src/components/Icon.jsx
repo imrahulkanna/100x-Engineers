@@ -1,24 +1,25 @@
-import React from 'react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useTweetData } from '../context/TweetContext';
-import Img from './Img';
+import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useTweetData } from "../context/TweetContext";
+import Img from "./Img";
 
 const Icon = ({
-  id, 
-  variant='tweet-icon',
-  iconPath, 
-  iconName, 
-  iconCount=0, 
+  id,
+  variant = "tweet-icon",
+  iconPath,
+  iconName,
+  iconCount = 0,
   isToggle,
-  style='', 
-  link=''
+  style = "",
+  link = "",
 }) => {
   const [toggleCount, setToggleCount] = useState([iconCount, isToggle]);
   const navigate = useNavigate();
   const { setIconCount } = useTweetData();
-  const currentIcon = (toggleCount[1] ? iconPath[1] : iconPath[0]) || iconPath[0];
-  
+  const currentIcon =
+    (toggleCount[1] ? iconPath[1] : iconPath[0]) || iconPath[0];
+
   function formatCountValue(value) {
     if (value < 10000) {
       return value.toLocaleString();
@@ -39,27 +40,31 @@ const Icon = ({
     }
   }
 
-  const handleTweetIconClick =() => {
-    if(iconName === "share") {
+  const handleTweetIconClick = () => {
+    if (iconName === "share") {
       setToggleCount([toggleCount[0], !toggleCount[1]]);
       return;
-    } 
+    }
     let count = parseCountValue(toggleCount[0]);
     const newCount = toggleCount[1] ? count - 1 : count + 1;
     const formatedNewCount = formatCountValue(newCount);
     const newToggleCount = [formatedNewCount, !toggleCount[1]];
     setToggleCount(newToggleCount);
     setIconCount(id, iconName, formatedNewCount);
-  }
+  };
   const handleNavIconClick = () => navigate(link);
 
   return (
-    <button className={style}
-      onClick={variant === "tweet-icon" ? handleTweetIconClick : handleNavIconClick} >
+    <button
+      className={style}
+      onClick={
+        variant === "tweet-icon" ? handleTweetIconClick : handleNavIconClick
+      }
+    >
       <Img imgPath={currentIcon} imgAlt={iconName} />
       {toggleCount[0] ? <p>{toggleCount[0]}</p> : <></>}
     </button>
   );
-}
+};
 
-export default Icon
+export default Icon;

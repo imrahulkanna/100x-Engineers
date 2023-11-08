@@ -1,23 +1,23 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import SignupHeader from '../../components/Signup/SignupHeader';
-import Fieldset from '../../components/Fieldset';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import SignupHeader from "../../components/Signup/SignupHeader";
+import Fieldset from "../../components/Fieldset";
 import Input from "../../components/Input";
-import Img from '../../components/Img';
-import correctImg from '../../assets/correct.svg'
+import Img from "../../components/Img";
+import correctImg from "../../assets/correct.svg";
 
 function CreateAccount2() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen font-inter text-twitter-neutral-50 pb-5 px-[15px] bg-black flex flex-col justify-between items-start flex-shrink-0">
+    <div className="flex min-h-screen flex-shrink-0 flex-col items-start justify-between bg-black px-[15px] pb-5 font-inter text-twitter-neutral-50">
       <section className="flex flex-col items-start gap-3 self-stretch">
         {/* Header */}
         <SignupHeader step={2} />
 
         {/* Create Account Form*/}
         <main className="flex flex-col items-start gap-5 self-stretch">
-          <h1 className="text-2xl leading-normal font-bold">
+          <h1 className="text-2xl font-bold leading-normal">
             Create your account
           </h1>
           <form className="flex flex-col items-start gap-8 self-stretch">
@@ -45,7 +45,7 @@ function CreateAccount2() {
       {/* Create Account Button*/}
       <section className="self-stretch">
         <button
-          className="w-full py-3 px-6 flex justify-center items-center self-stretch gap-2.5 rounded-signup-radius bg-twitter-blue hover:bg-twitter-blue-hover shadow-signup backdrop-blur-xl-1 font-bold leading-normal"
+          className="flex w-full items-center justify-center gap-2.5 self-stretch rounded-signup-radius bg-twitter-blue px-6 py-3 font-bold leading-normal shadow-signup backdrop-blur-xl-1 hover:bg-twitter-blue-hover"
           onClick={() => navigate("/signup3")}
         >
           Sign up
@@ -55,4 +55,4 @@ function CreateAccount2() {
   );
 }
 
-export default CreateAccount2
+export default CreateAccount2;

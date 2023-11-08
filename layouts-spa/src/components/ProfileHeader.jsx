@@ -1,11 +1,13 @@
-import React from 'react';
-import Img from './Img';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Img from "./Img";
 import banner from "../assets/banner.jpg";
 import userDP from "../assets/rahul.jpg";
 import linkIcon from "../assets/link.svg";
 import calendar from "../assets/calendar.svg";
 
 const ProfileHeader = () => {
+  const navigate = useNavigate();
   return (
     <>
       {/* Banner */}
@@ -14,24 +16,24 @@ const ProfileHeader = () => {
       </section>
 
       {/* Profile Details */}
-      <section className="relative py-3 px-4 flex flex-col border-b border-twitter-neutral-500">
+      <section className="relative flex flex-col border-b border-twitter-neutral-500 px-4 py-3">
         <Img
           imgPath={userDP}
           imgAlt="user-dp"
           style="w-20 h-20 rounded-full border-4 border-black absolute left-4 top-0 -translate-y-1/2"
         />
-        <div className="w-full flex justify-end">
+        <div className="flex w-full justify-end">
           <button
             onClick={() => navigate("/edit-profile")}
-            className="py-2 px-5 justify-center items-center rounded-twitter border border-button-stroke"
+            className="items-center justify-center rounded-twitter border border-button-stroke px-5 py-2"
           >
             Edit profile
           </button>
         </div>
-        <div className="self-stretch flex flex-col gap-4">
-          <div className="self-stretch flex flex-col gap-1 leading-normal">
+        <div className="flex flex-col gap-4 self-stretch">
+          <div className="flex flex-col gap-1 self-stretch leading-normal">
             <h1 className="text-xl font-bold leading-normal">Rahul Kanna</h1>
-            <p className="text-twitter-neutral-500 text-base-1 leading-normal">
+            <p className="text-base-1 leading-normal text-twitter-neutral-500">
               @imrahulkanna
             </p>
           </div>
@@ -40,7 +42,7 @@ const ProfileHeader = () => {
             anime.
             <span className="text-twitter-blue"> #codelove</span> dattebayo 🎶
           </div>
-          <div className="self-stretch flex flex-wrap gap-x-5 text-twitter-neutral-500">
+          <div className="flex flex-wrap gap-x-5 self-stretch text-twitter-neutral-500">
             <div className="flex items-center gap-1">
               <svg
                 width="15"
@@ -74,16 +76,16 @@ const ProfileHeader = () => {
               <p>Joined June 2020</p>
             </div>
           </div>
-          <div className="self-stretch flex items-center gap-5 font-medium leading-normal">
+          <div className="flex items-center gap-5 self-stretch font-medium leading-normal">
             <p>
               196{" "}
-              <span className="text-twitter-neutral-500 font-normal">
+              <span className="font-normal text-twitter-neutral-500">
                 Following
               </span>
             </p>
             <p>
               57{" "}
-              <span className="text-twitter-neutral-500 font-normal">
+              <span className="font-normal text-twitter-neutral-500">
                 Followers
               </span>
             </p>
@@ -92,6 +94,6 @@ const ProfileHeader = () => {
       </section>
     </>
   );
-}
+};
 
-export default ProfileHeader
+export default ProfileHeader;

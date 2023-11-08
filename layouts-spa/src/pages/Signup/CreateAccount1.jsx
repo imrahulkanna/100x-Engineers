@@ -3,40 +3,40 @@ import { useNavigate } from "react-router-dom";
 import SignupHeader from "../../components/Signup/SignupHeader";
 import Fieldset from "../../components/Fieldset";
 import Input from "../../components/Input";
-import Select, {SelectItem} from "../../components/Select";
+import Select, { SelectItem } from "../../components/Select";
 
 function CreateAccount1() {
   const navigate = useNavigate();
   const months = [
-    'Januaury',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    "Januaury",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
-  const dates = []
-  for(let i=1;i<=31;i++) dates.push(i);
-  
-  const years = []
-  for(let i=2023;i>=1990;i--) years.push(i);
+  const dates = [];
+  for (let i = 1; i <= 31; i++) dates.push(i);
+
+  const years = [];
+  for (let i = 2023; i >= 1990; i--) years.push(i);
 
   return (
-    <div className="min-h-screen font-inter text-twitter-neutral-50 pb-5 px-[15px] bg-black flex flex-col justify-between items-start flex-shrink-0">
+    <div className="flex min-h-screen flex-shrink-0 flex-col items-start justify-between bg-black px-[15px] pb-5 font-inter text-twitter-neutral-50">
       <section className="flex flex-col items-start gap-3 self-stretch">
         {/* Header */}
         <SignupHeader step={1} />
 
         {/* Create Account Form*/}
         <main className="flex flex-col items-start gap-5 self-stretch">
-          <h1 className="text-2xl leading-normal font-bold">
+          <h1 className="text-2xl font-bold leading-normal">
             Create your account
           </h1>
           <form className="flex flex-col items-start gap-8 self-stretch">
@@ -54,13 +54,13 @@ function CreateAccount1() {
               <p className="text-base-1 font-bold leading-normal">
                 Date of birth
               </p>
-              <p className="text-[rgba(255,255,255,0.6)] text-sm font-normal leading-normal">
+              <p className="text-sm font-normal leading-normal text-[rgba(255,255,255,0.6)]">
                 This will not be shown publicly. Confirm your own age, even if
                 this account is for a business, a pet, or something else.
               </p>
             </div>
 
-            <div className="flex items-start self-stretch gap-3">
+            <div className="flex items-start gap-3 self-stretch">
               {/* Month */}
               <Fieldset type={"Month"} size="1/2">
                 <Select name="Month">
@@ -98,7 +98,7 @@ function CreateAccount1() {
       {/* Create Account Button*/}
       <section className="self-stretch">
         <button
-          className="w-full py-3 px-6 rounded-signup-radius bg-twitter-neutral-50 hover:bg-twitter-neutral-200 text-black font-bold leading-normal flex justify-center items-center shadow-signup backdrop-blur-xl-1"
+          className="flex w-full items-center justify-center rounded-signup-radius bg-twitter-neutral-50 px-6 py-3 font-bold leading-normal text-black shadow-signup backdrop-blur-xl-1 hover:bg-twitter-neutral-200"
           onClick={() => navigate("/signup2")}
         >
           Create account

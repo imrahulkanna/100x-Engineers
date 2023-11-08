@@ -1,22 +1,22 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Fieldset from '../../components/Fieldset';
-import Input from '../../components/Input';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Fieldset from "../../components/Fieldset";
+import Input from "../../components/Input";
 import Img from "../../components/Img";
 import backArrow from "../../assets/back.svg";
 import banner from "../../assets/banner.jpg";
 import userDP from "../../assets/rahul.jpg";
-import cancel from '../../assets/cancel.svg';
-import photo from '../../assets/photo.svg';
+import cancel from "../../assets/cancel.svg";
+import photo from "../../assets/photo.svg";
 
 function EditProfile() {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-black text-twitter-neutral-50 font-inter flex flex-col">
-      <header className="py-3 px-4 flex justify-between items-center">
+    <div className="flex min-h-screen flex-col bg-black font-inter text-twitter-neutral-50">
+      <header className="flex items-center justify-between px-4 py-3">
         <div className="flex gap-5">
           {/* Back arrow */}
-          <div onClick={() => navigate(-1)} className='cursor-pointer'>
+          <div onClick={() => navigate(-1)} className="cursor-pointer">
             <Img imgPath={backArrow} imgAlt="back-arrow" />
           </div>
           <p>Edit Profile</p>
@@ -25,17 +25,17 @@ function EditProfile() {
         {/* Save button */}
         <button
           onClick={() => navigate("/profile")}
-          className="py-2 px-5 flex justify-center items-center gap-2.5 rounded-twitter bg-twitter-neutral-50 hover:bg-twitter-neutral-200 disabled:opacity-50 disabled:hover:bg-twitter-blue md:py-[15px] md:px-[93px] md:rounded-full"
+          className="flex items-center justify-center gap-2.5 rounded-twitter bg-twitter-neutral-50 px-5 py-2 hover:bg-twitter-neutral-200 disabled:opacity-50 disabled:hover:bg-twitter-blue md:rounded-full md:px-[93px] md:py-[15px]"
         >
-          <p className="text-black text-base font-bold leading-normal">Save</p>
+          <p className="text-base font-bold leading-normal text-black">Save</p>
         </button>
       </header>
 
       {/* Cover & Profile image edit */}
-      <section className="mb-12 relative self-stretch border">
+      <section className="relative mb-12 self-stretch border">
         {/* Cover image edit section */}
         <div className="relative self-stretch">
-          <div className="flex justify-center items-center gap-4 bg-transparent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-60">
+          <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-4 bg-transparent opacity-60">
             <Img
               imgPath={photo}
               imgAlt="photo-icon"
@@ -51,7 +51,7 @@ function EditProfile() {
         </div>
 
         {/* Profile image edit section */}
-        <div className="absolute bottom-0 translate-y-1/2 left-4">
+        <div className="absolute bottom-0 left-4 translate-y-1/2">
           <Img
             imgPath={userDP}
             imgAlt="user-dp"
@@ -66,14 +66,10 @@ function EditProfile() {
       </section>
 
       {/* User details edit section */}
-      <main className="py-3 px-4 flex flex-col gap-5">
+      <main className="flex flex-col gap-5 px-4 py-3">
         <section className="self-stretch">
           <Fieldset type={"Name"}>
-            <Input
-              type="text"
-              placeholder="Name"
-              defaultValue="Rahul Kanna"
-            />
+            <Input type="text" placeholder="Name" defaultValue="Rahul Kanna" />
           </Fieldset>
         </section>
 
@@ -82,7 +78,7 @@ function EditProfile() {
             <textarea
               name="tweet-content"
               placeholder="Bio"
-              className="w-full h-16 bg-transparent text-base leading-normal placeholder:text-twitter-neutral-600 focus:outline-none resize-none overflow-y-auto"
+              className="h-16 w-full resize-none overflow-y-auto bg-transparent text-base leading-normal placeholder:text-twitter-neutral-600 focus:outline-none"
               wrap="soft"
               spellCheck="true"
               dir="auto"

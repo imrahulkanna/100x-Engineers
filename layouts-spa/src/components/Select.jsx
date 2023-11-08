@@ -1,13 +1,15 @@
-import React from 'react';
-import { useAuth } from '../context/AuthContext';
+import React from "react";
+import { useAuth } from "../context/AuthContext";
 
-export const SelectItem = ({value, ...rest}) => {
+export const SelectItem = ({ value, ...rest }) => {
   return (
-    <option value={value} {...rest}>{value}</option>
-  )
-}
+    <option value={value} {...rest}>
+      {value}
+    </option>
+  );
+};
 
-const Select = ({name, children}) => {
+const Select = ({ name, children }) => {
   const { userCred, setUserCred } = useAuth();
 
   function handleChange(e) {
@@ -24,6 +26,6 @@ const Select = ({name, children}) => {
       {children}
     </select>
   );
-}
+};
 
 export default Select;

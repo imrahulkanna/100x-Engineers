@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 // using CustomHooks to utilize the context provided by the provider
 export const useAuth = () => {
   return useContext(AuthContext);
-}
+};
 
 const AuthProvider = ({ children }) => {
   // creating an template object for credentials
@@ -17,8 +17,8 @@ const AuthProvider = ({ children }) => {
     Day: "",
     Year: "",
     "Date of birth": "",
-    Password: '',
-    'Verification code': ''
+    Password: "",
+    "Verification code": "",
   };
 
   const [userCred, setUserCred] = useState(cred);
@@ -29,6 +29,6 @@ const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
-}
+};
 
 export default AuthProvider;

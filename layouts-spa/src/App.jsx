@@ -11,7 +11,6 @@ import ComposeTweet from "./pages/ComposeTweet";
 import AuthProvider from "./context/AuthContext";
 import TweetProvider from "./context/TweetContext";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
