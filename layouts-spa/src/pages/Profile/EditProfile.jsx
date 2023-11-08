@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Fieldset from "../../components/Fieldset";
 import Input from "../../components/Input";
 import Img from "../../components/Img";
+import Button from "../../components/Button";
 import backArrow from "../../assets/back.svg";
 import banner from "../../assets/banner.jpg";
 import userDP from "../../assets/rahul.jpg";
@@ -25,10 +26,11 @@ function EditProfile() {
         {/* Save button */}
         <button
           onClick={() => navigate("/profile")}
-          className="flex items-center justify-center gap-2.5 rounded-twitter bg-twitter-neutral-50 px-5 py-2 hover:bg-twitter-neutral-200 disabled:opacity-50 disabled:hover:bg-twitter-blue md:rounded-full md:px-[93px] md:py-[15px]"
+          className="flex items-center justify-center rounded-twitter bg-twitter-neutral-50 px-6 py-2 text-base font-bold leading-normal text-black hover:bg-twitter-neutral-200 disabled:opacity-50 disabled:hover:bg-twitter-neutral-50 md:rounded-full md:px-[93px] md:py-[15px]"
         >
-          <p className="text-base font-bold leading-normal text-black">Save</p>
+          Save
         </button>
+        <Button variant="solid" text="Save" type="primary" />
       </header>
 
       {/* Cover & Profile image edit */}

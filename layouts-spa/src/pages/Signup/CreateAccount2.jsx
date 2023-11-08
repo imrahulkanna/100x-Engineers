@@ -5,6 +5,7 @@ import Fieldset from "../../components/Fieldset";
 import Input from "../../components/Input";
 import Img from "../../components/Img";
 import correctImg from "../../assets/correct.svg";
+import Button from "../../components/Button";
 
 function CreateAccount2() {
   const navigate = useNavigate();
@@ -44,12 +45,18 @@ function CreateAccount2() {
 
       {/* Create Account Button*/}
       <section className="self-stretch">
-        <button
-          className="flex w-full items-center justify-center gap-2.5 self-stretch rounded-signup-radius bg-twitter-blue px-6 py-3 font-bold leading-normal shadow-signup backdrop-blur-xl-1 hover:bg-twitter-blue-hover"
+        {/* <button
+          className="flex w-full items-center justify-center self-stretch rounded-signup-radius bg-twitter-blue px-6 py-3 font-bold leading-normal text-twitter-neutral-50 shadow-signup backdrop-blur-xl-1 hover:bg-twitter-blue-hover"
           onClick={() => navigate("/signup3")}
         >
           Sign up
-        </button>
+        </button> */}
+        <Button
+          variant="solid"
+          text="Sign up"
+          type="secondary"
+          onClick={() => navigate("/signup3")}
+        />
       </section>
     </div>
   );

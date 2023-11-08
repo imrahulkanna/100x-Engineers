@@ -4,6 +4,8 @@ import SignupHeader from "../../components/Signup/SignupHeader";
 import Fieldset from "../../components/Fieldset";
 import Input from "../../components/Input";
 import Select, { SelectItem } from "../../components/Select";
+import Button from "../../components/Button";
+
 
 function CreateAccount1() {
   const navigate = useNavigate();
@@ -97,12 +99,18 @@ function CreateAccount1() {
 
       {/* Create Account Button*/}
       <section className="self-stretch">
-        <button
+        {/* <button
           className="flex w-full items-center justify-center rounded-signup-radius bg-twitter-neutral-50 px-6 py-3 font-bold leading-normal text-black shadow-signup backdrop-blur-xl-1 hover:bg-twitter-neutral-200"
           onClick={() => navigate("/signup2")}
         >
           Create account
-        </button>
+        </button> */}
+        <Button
+          variant="solid"
+          text="Create account"
+          type="primary"
+          onClick={() => navigate("/signup2")}
+        />
       </section>
     </div>
   );

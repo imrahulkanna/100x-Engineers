@@ -4,6 +4,7 @@ import { useTweetData } from "../context/TweetContext";
 import cancel from "../assets/cancel.svg";
 import Img from "../components/Img";
 import userDP from "../assets/rahul.jpg";
+import Button from "../components/Button";
 
 function ComposeTweet() {
   const navigate = useNavigate();
@@ -33,15 +34,20 @@ function ComposeTweet() {
           <Img imgPath={cancel} imgAlt="cancel-icon" />
         </div>
 
-        <button
+        {/* <button
           onClick={handleClick}
           disabled={characterCount <= 0 ? true : false}
-          className="flex items-center justify-center gap-2.5 rounded-twitter bg-twitter-blue px-6 py-2 hover:bg-twitter-blue-hover disabled:opacity-50 disabled:hover:bg-twitter-blue md:rounded-full md:px-[93px] md:py-[15px]"
+          className="flex items-center justify-center rounded-twitter bg-twitter-blue px-6 py-2 text-base font-bold leading-normal text-twitter-neutral-50 shadow-signup backdrop-blur-xl-1 hover:bg-twitter-blue-hover disabled:opacity-50 disabled:hover:bg-twitter-blue md:rounded-full md:px-[93px] md:py-[15px]"
         >
-          <p className="text-base font-bold leading-normal text-twitter-neutral-50">
-            Post
-          </p>
-        </button>
+          Post
+        </button> */}
+        <Button
+          variant="solid"
+          text="Post"
+          type="secondary"
+          onClick={handleClick}
+          disabled={characterCount <= 0 ? true : false}
+        />
       </header>
 
       <main className="flex flex-1 gap-3 self-stretch px-4 py-2">

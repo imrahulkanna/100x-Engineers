@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Img from "./Img";
+import Button from "./Button";
 import banner from "../assets/banner.jpg";
 import userDP from "../assets/rahul.jpg";
 import linkIcon from "../assets/link.svg";
@@ -23,12 +24,17 @@ const ProfileHeader = () => {
           style="w-20 h-20 rounded-full border-4 border-black absolute left-4 top-0 -translate-y-1/2"
         />
         <div className="flex w-full justify-end">
-          <button
+          {/* <button
             onClick={() => navigate("/edit-profile")}
-            className="items-center justify-center rounded-twitter border border-button-stroke px-5 py-2"
+            className="flex items-center justify-center rounded-twitter border border-button-stroke px-5 py-2"
           >
             Edit profile
-          </button>
+          </button> */}
+          <Button
+            variant={"outline"}
+            text={"Edit profile"}
+            onClick={() => navigate("/edit-profile")}
+          />
         </div>
         <div className="flex flex-col gap-4 self-stretch">
           <div className="flex flex-col gap-1 self-stretch leading-normal">

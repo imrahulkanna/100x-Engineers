@@ -3,6 +3,7 @@ import SignupHeader from "../../components/Signup/SignupHeader";
 import Fieldset from "../../components/Fieldset";
 import Input from "../../components/Input";
 import Img from "../../components/Img";
+import Button from "../../components/Button";
 import eyeIcon from "../../assets/visible-t.svg";
 import eyeIconActive from "../../assets/visible-t-blue.svg";
 import { useNavigate } from "react-router-dom";
@@ -54,12 +55,18 @@ function CreateAccount4() {
 
       {/* Next Button */}
       <section className="self-stretch">
-        <button
+        {/* <button
           className="flex w-full items-center justify-center rounded-signup-radius bg-twitter-neutral-50 px-6 py-3 font-bold leading-normal text-black shadow-signup backdrop-blur-xl-1 hover:bg-twitter-neutral-200"
           onClick={() => navigate("/home")}
         >
           Next
-        </button>
+        </button> */}
+        <Button
+          variant="solid"
+          text="Next"
+          type="primary"
+          onClick={() => navigate("/home")}
+        />
       </section>
     </div>
   );
